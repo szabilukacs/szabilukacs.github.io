@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Lukács Szabolcs's website</title>
-    <meta content="My personal website" name="description">
-    <meta content="web development lukács szabolcs" name="keywords">
+    <title>Lukács Szabolcs</title>
+    <meta content="Bemutatkozó weboldal" name="description">
+    <meta content="weboldal lukács szabolcs" name="keywords">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -16,6 +16,8 @@
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -28,7 +30,7 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <h1 class="logo"><a href="index.html">Lukács Szabolcs's website</a></h1>
+        <h1 class="logo"><a href="index.html">Lukács Szabolcs</a></h1>
 
         <nav id="navbar" class="navbar">
             <ul>
@@ -118,7 +120,6 @@
         </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
     <section id="services" class="services-mf pt-5 route">
         <div class="container">
             <div class="row">
@@ -240,6 +241,56 @@
                         <div id="contact" class="box-shadow-full">
                             <div class="row">
                                 <div class="col-md-6">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            Send Message
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <form action="forms/contact.php" method="post" role="form"
+                                              class="php-email-form">
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" name="name" class="form-control" id="name"
+                                                               placeholder="Your Name" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" name="email" id="email"
+                                                               placeholder="Your Email" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="subject"
+                                                               id="subject" placeholder="Subject" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" rows="5"
+                                                                  placeholder="Message" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 text-center my-3">
+                                                    <div class="loading">Loading</div>
+                                                    <div class="error-message"></div>
+                                                    <div class="sent-message">Your message has been sent. Thank you!
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 text-center">
+                                                    <button type="submit"
+                                                            class="button button-a button-big button-rouded">Send
+                                                        Message
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
                                     <div class="title-box-2 pt-4 pt-md-0">
                                         <h5 class="title-left">
                                             Get in Touch
@@ -312,7 +363,7 @@
         class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
-
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
