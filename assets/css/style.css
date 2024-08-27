@@ -1256,6 +1256,7 @@ a:hover {
 
 .card-blog .card-body {
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .card-blog .card-category-box {
