@@ -2,355 +2,151 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lukács Szabolcs's website</title>
+    <title>Lukács Szabolcs - Portfolio</title>
     <meta content="My personal website" name="description">
     <meta content="web development lukács szabolcs" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/favicon.png" rel="apple-touch-icon">
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Lukács Szabolcs</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#myprojects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I’m Lukács Szabolcs, a <strong>Software Engineer</strong> graduated from Sapientia Hungarian University
+            in the Automation and Applied Informatics section.</p>
+        <p>As a hobby, I enjoy creating <strong>websites</strong>, while exploring new possibilities in
+            <strong>IoT</strong>
+        </p>
 
-            <h1 class="logo"><a href="index.html">Lukács Szabolcs's website</a></h1>
+        <h3>Skills</h3>
+        <ul>
+            <p>Web Development: Php, Laravel, HTML, CSS, JavaScript, Mysql</p>
+            <p>IoT: Arduino, ESP32, C/C++ </p>
+        </ul>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto" href="index.html" aria-label="Index-EN">
-                            <img src="assets/img/ENG.png" alt="">
-                        </a>
-                    </li>
-                    <li><a class="nav-link scrollto" href="index-HU.html" aria-label="Index-HU">
-                            <img src="assets/img/HU.png" alt="">
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#projects">Projects</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+        <a href="#myprojects" class="btn">View My Work</a>
+        <a href="LukacsSzabolcs_CV.pdf" class="btn">Download CV</a>
+    </section>
 
-        </div>
-    </header><!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/bg-1.jpg)">
-        <div class="overlay-itro"></div>
-        <div class="hero-content display-table">
-            <div class="table-cell">
-                <div class="container">
-                    <h1 class="hero-title mb-4">Lukács Szabolcs</h1>
-                    <p class="hero-subtitle"><span class="typed"
-                            data-typed-items="Web Development, Web Design, Web Hosting"></span>
-                    </p>
-                </div>
+    <!-- Projects Section -->
+    <section id="myprojects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Gabriella Vendégház Gyergyószárhegy</h3>
+                <p>Modern, mobile-friendly fast website for a guesthouse.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, SEO</p>
+                <a href="https://szallasgyergyoban.eu/" class="btn">Visit website</a>
+            </div>
+            <div class="project-image">
+                <img src="img/gabriella_vendeghaz_index.jpg" alt="Project Image">
             </div>
         </div>
-    </div><!-- End Hero Section -->
-
-    <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about-mf sect-pt4 route">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="box-shadow-full">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-md-5">
-                                            <div class="about-img">
-                                                <img src="assets/img/profil.jpg" class="img-fluid rounded b-shadow-a"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-7">
-                                            <div class="about-info">
-                                                <p><span class="title-s">Name: </span> <span>Lukács Szabolcs</span></p>
-                                                <p><span class="title-s">Profile: </span> <span>Web development</span>
-                                                </p>
-                                                <p><span class="title-s">Email: </span>
-                                                    <span>lukacs.szabi58@gmail.com</span>
-                                                </p>
-                                                <p><span class="title-s">Phone: </span> <span>+407 46 657 826</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="about-me pt-4 pt-md-0">
-                                        <div class="title-box-2">
-                                            <h2 class="title-left">
-                                                About me
-                                            </h2>
-                                        </div>
-                                        <p class="lead">
-                                            I am a student at the Sapientia Hungarian University of
-                                            Transylvania, Faculty of Technical and Human Sciences,
-                                            Automation and Applied Informatics.</p>
-                                        <p class="lead">Intern at: Webapix kft. from 2021 - Web development
-                                            with Laravel framework
-                                        </p>
-                                        <h3 class=""><a href="Lukacs_Szabolcs_CV.pdf" target="_blank"><u>Download
-                                                    CV</u></a>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Hargita Megye Buszjáratok</h3>
+                <p>Website where you can find all the bus schedules in Harghita county.</p>
+                <p><strong>Tech Stack:</strong> php, mysql, HTML, CSS</p>
             </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services-mf pt-5 route">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="title-box text-center">
-                            <h3 class="title-a">
-                                Services
-                            </h3>
-                            <div class="line-mf"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="service-box">
-                            <div class="service-ico">
-                                <span class="ico-circle"><i class="bi bi-pc-display"></i></span>
-                            </div>
-                            <div class="service-content">
-                                <h2 class="s-title">Web Development</h2>
-                                <p class="s-description text-center">
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="service-box">
-                            <div class="service-ico">
-                                <span class="ico-circle"><i class="bi bi-palette"></i></span>
-                            </div>
-                            <div class="service-content">
-                                <h2 class="s-title">Web Design</h2>
-                                <p class="s-description text-center">
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="service-box">
-                            <div class="service-ico">
-                                <span class="ico-circle"><i class="bi bi-server"></i></span>
-                            </div>
-                            <div class="service-content">
-                                <h2 class="s-title">Web hosting</h2>
-                                <p class="s-description text-center">
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="service-box">
-                            <div class="service-ico">
-                                <span class="ico-circle"><i class="bi bi-google"></i></span>
-                            </div>
-                            <div class="service-content">
-                                <h2 class="s-title">SEO</h2>
-                                <p class="s-description text-center">
-                                    Search Engine Optimization
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="project-image">
+                <img src="img/kep_buszos_full.png" alt="Project Image">
             </div>
-        </section><!-- End Services Section -->
-
-        <!-- ======= Blog Section ======= -->
-        <section id="projects" class="blog-mf sect-pt4 route">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="title-box text-center">
-                            <h3 class="title-a">
-                                My projects
-                            </h3>
-                            <div class="line-mf"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card card-blog">
-                            <div class="card-img">
-                                <a href="https://szallasgyergyoban.eu" target="_blank">
-                                    <img src="assets/img/gabriella_vendeghaz_index.jpg"
-                                        alt="Gabriella Vendégház Szárhegy" class="img-fluid"></a>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="https://szallasgyergyoban.eu" target="_blank">Gabriella
-                                        Vendégház Gyergyószárhegy</a>
-                                </h3>
-                                <p class="card-description">
-                                    The guesthouse is located in Szárhegy, 350 meters from Lázár Castle, in a quiet
-                                    environment, perfect accommodation for family trips.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-blog">
-                            <div class="card-img">
-                                <a href="https://gardenmonitor.eu/" target="_blank">
-                                    <img src="assets/img/shm2.png" alt="Smart Home monitoring system"
-                                        class="img-fluid"></a>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="https://gardenmonitor.eu/" target="_blank">Smart Garden
-                                        Monitoring</a>
-                                </h3>
-                                <p class="card-description">
-                                    Smart Garden Monitoring system, is an Iot project with a microcontroller measuring
-                                    temperature, humidity, ligth inside and outside also. <br> <br> <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-blog">
-                            <div class="card-img">
-                                <a href="" target="_blank">
-                                    <img src="assets/img/kep_buszos_full.png" alt="Hargita buszos oldala"
-                                        class="img-fluid"></a>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title"><a href="" target="_blank">Hargita Megye Buszjáratok</a>
-                                </h3>
-                                <p class="card-description">
-                                    Website where you can find all the bus schedules in Harghita county. <br>
-                                    <br> <br> <br> <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Project Title</h3>
+                <p>Smart Garden Monitoring system, is an Iot project with a microcontroller measuring
+                    temperature, humidity, ligth inside and outside also.</p>
+                <p><strong>Tech Stack:</strong> php, mysql, HTML, CSS</p>
+                <a href="https://gardenmonitor.eu/" class="btn">Visit website</a>
             </div>
-        </section><!-- End Blog Section -->
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
-            style="background-image: url(assets/img/overlay-1.jpg)">
-            <div class="overlay-mf"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="contact-mf">
-                            <div id="contact" class="box-shadow-full">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="title-box-2 pt-4 pt-md-0">
-                                            <h3 class="title-left">
-                                                Get in Touch
-                                            </h3>
-                                        </div>
-                                        <div class="more-info">
-                                            <p class="lead">
-
-                                            </p>
-                                            <ul class="list-ico">
-                                                <li><span class="bi bi-geo-alt"></span> Lazarea, Harghita County,
-                                                    Romania
-                                                </li>
-                                                <li><span class="bi bi-phone"></span> +407 46 657 826</li>
-                                                <li><span class="bi bi-envelope"></span> lukacs.szabi58@gmail.com</li>
-                                            </ul>
-                                        </div>
-                                        <div class="socials">
-                                            <ul>
-                                                <li><a href="https://www.facebook.com/szabi.lukacs/"
-                                                        aria-label="Facebook"><span class="ico-circle"><i
-                                                                class="bi bi-facebook"></i></span></a></li>
-                                                <li><a href="https://www.instagram.com/szabilukacs/"
-                                                        aria-label="Instagram"><span class="ico-circle"><i
-                                                                class="bi bi-instagram"></i></span></a></li>
-                                                <li>
-                                                    <a href="https://github.com/szabilukacs" aria-label="Github"><span
-                                                            class="ico-circle"><i class="bi bi-github"></i></span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="https://www.linkedin.com/in/luk%C3%A1cs-szabolcs-0683751a8/"
-                                                        aria-label="Linkedin"><span class="ico-circle"><i
-                                                                class="bi bi-linkedin"></i></span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="project-image">
+                <img src="img/shm2.png" alt="Project Image">
             </div>
-        </section><!-- End Contact Section -->
+        </div>
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Smart Relay</h3>
+                <p>SmartHome Relay is an IoT project using an ESP32 to remotely
+                    control a relay and monitor boiler temperature via the Blynk platform. 🌡️📱</p>
+                <p><strong>Tech Stack:</strong> C, ESP32, microcontroller, KiCAD, </p>
+                <a href="https://github.com/szabilukacs/SmartHomeRelay" class="btn">Github Repo</a>
+            </div>
+            <div class="project-image">
+                <img src="img/view_3d.jpg" alt="Project Image">
+            </div>
+        </div>
+    </section>
 
-    </main><!-- End #main -->
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Software Engineer</h3>
+                <p>Duration: Aug 2023 - Present</p>
+                <p>Junior Software Engineer at Marquardt Gmbh in automotive industry working with nfc, capacity
+                    technologies.</p>
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Software developer</h3>
+                <p>Duration: Jun 2022 - Aug 2022</p>
+                <p>Intern at Webapix kft. at Budapest developing websites in Laravel.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- ======= Footer ======= -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me on</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/luk%C3%A1cs-szabolcs-0683751a8/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://github.com/szabilukacs" target="_blank" class="social-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="copyright-box">
-                        <p class="copyright">&copy; <strong>Lukacs Web Development</strong> 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer><!-- End  Footer -->
+        <p>© 2024 Lukács Szabolcs. All Rights Reserved.</p>
+    </footer>
 
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
-
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+    <!-- Smooth Scrolling and Active Section JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
