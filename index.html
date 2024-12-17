@@ -3,147 +3,298 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Lukács Szabolcs - Portfolio</title>
-    <meta content="My personal website" name="description">
-    <meta content="web development lukács szabolcs" name="keywords">
-
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/favicon.png" rel="apple-touch-icon">
-
-    <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--Swap our for actual link-->
+    <link rel="canonical" href="https://szabilukacs.github.io/">
+
+    <meta name="description" content="My portfolio website">
+    <meta name="keywords" content="software engineer, web development, Lukács Szabolcs">
+
+    <!--Social Media Display-->
+    <meta property="og:title" content="Lukács Szabolcs engineer" />
+    <meta property="og:description" content="Lukács Szabolcs's website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="Official link for that page (https://szabilukacs.github.io)" />
+    <meta property="og:image" content="assets/images/logos/Lukacs_Szabolcs_logo.svg" />
+    <meta property="og:image:secure_url" content="/assets/images/logos/Lukacs_Szabolcs_logo.svg" />
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logos/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logos/favicon.png">
+    <link rel="manifest" href="assets/images/logos/favicon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="assets/images/background.jpg">
+
+    <link rel="stylesheet" href="css/core-styles.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Lukács Szabolcs Personal website</title>
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Lukács Szabolcs</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#myprojects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+    <!--Screen reader skip main nav-->
+    <a class="skip" aria-label="skip to main content" href="#home">Click To Skip To Main Content</a>
+
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!--Nav Logo-->
+            <a href="#home" class="cs-logo" aria-label="back to home">
+                <img src="assets/images/logos/Lukacs_Szabolcs_logo.svg" alt="logo" width="210" height="29"
+                    aria-hidden="true" decoding="async">
+            </a>
+            <!--Navigation List-->
+            <nav class="cs-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="#home" class="cs-li-link cs-active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="#experience" class="cs-li-link">
+                                Experience
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="#projects" class="cs-li-link">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="#contact" class="cs-li-link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" style="padding: 50px 20px;">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I’m Lukács Szabolcs, a <strong>Software Engineer</strong> graduated from Sapientia Hungarian University
-            in the Automation and Applied Informatics section.</p>
-        <p>As a hobby, I enjoy creating <strong>websites</strong>, while exploring new possibilities in
-            <strong>IoT</strong>
-        </p>
+    <main id="main">
+        <!-- ============================================ -->
+        <!--                    Hero                      -->
+        <!-- ============================================ -->
 
-        <h3>Skills</h3>
-        <ul>
-            <p>Web Development: Php, Laravel, HTML, CSS, JavaScript, Mysql</p>
-            <p>IoT: Arduino, ESP32, C/C++ </p>
-        </ul>
+        <section id="home">
+            <div class="cs-container">
+                <h1 class="cs-title">Welcome to My Portfolio</h1>
+                <p class="cs-text">
+                    Hi, I’m Lukács Szabolcs, a Software Engineer graduated from Sapientia Hungarian University in the
+                    Automation and Applied Informatics section. As a hobby, I enjoy creating websites, while exploring
+                    new possibilities in IoT
+                </p>
+                <a href="#projects" class="cs-button-solid">Projects</a>
+            </div>
 
-        <a href="#myprojects" class="btn">View My Work</a>
-    </section>
+            <!-- Background Image -->
+            <picture class="cs-background">
+                <source media="(max-width: 600px)" srcset="/assets/images/shm2.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/shm2.png">
+                <img loading="lazy" decoding="async" src="/assets/images/shm2.png" alt="laptop-background" width="2250"
+                    height="1500" aria-hidden="true">
+            </picture>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="myprojects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Gabriella Vendégház Gyergyószárhegy</h3>
-                <p>Modern, mobile-friendly fast website for a guesthouse.</p>
-                <p><strong>Tech Stack:</strong> HTML, CSS, SEO</p>
-                <a href="https://szallasgyergyoban.eu/" class="btn">Visit website</a>
-            </div>
-            <div class="project-image">
-                <img src="img/gabriella_vendeghaz_index.jpg" alt="Project Image">
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Hargita Megye Buszjáratok</h3>
-                <p>Website where you can find all the bus schedules in Harghita county.</p>
-                <p><strong>Tech Stack:</strong> php, mysql, HTML, CSS</p>
-            </div>
-            <div class="project-image">
-                <img src="img/kep_buszos_full.png" alt="Project Image">
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Project Title</h3>
-                <p>Smart Garden Monitoring system, is an Iot project with a microcontroller measuring
-                    temperature, humidity, ligth inside and outside also.</p>
-                <p><strong>Tech Stack:</strong> php, mysql, HTML, CSS</p>
-                <a href="https://gardenmonitor.eu/" class="btn">Visit website</a>
-            </div>
-            <div class="project-image">
-                <img src="img/shm2.png" alt="Project Image">
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Smart Relay</h3>
-                <p>SmartHome Relay is an IoT project using an ESP32 to remotely
-                    control a relay and monitor boiler temperature via the Blynk platform. 🌡️📱</p>
-                <p><strong>Tech Stack:</strong> C, ESP32, microcontroller, KiCAD, </p>
-                <a href="https://github.com/szabilukacs/SmartHomeRelay" class="btn">Github Repo</a>
-            </div>
-            <div class="project-image">
-                <img src="img/view_3d.jpg" alt="Project Image">
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="timeline">
-            <h2>Experiences</h2>
-            <div class="timeline-item">
-                <h3>Software Engineer</h3>
-                <p>Duration: Aug 2023 - Present</p>
-                <p>Junior Software Engineer at Marquardt Gmbh in automotive industry working with nfc, capacity
-                    technologies.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Software developer</h3>
-                <p>Duration: Jun 2022 - Aug 2022</p>
-                <p>Intern at Webapix kft. at Budapest developing websites in Laravel.</p>
-            </div>
-        </div>
-    </section>
+        <!-- ============================================ -->
+        <!--              Experience                      -->
+        <!-- ============================================ -->
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me on</h2>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/luk%C3%A1cs-szabolcs-0683751a8/" target="_blank" class="social-link">
-                <i class="fab fa-linkedin-in"></i> LinkedIn
-            </a>
-            <span>|</span>
-            <a href="https://github.com/szabilukacs" target="_blank" class="social-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
-    </section>
+        <section id="experience">
+            <div class="cs-container">
+                <!-- Left Section -->
+                <div class="cs-content">
+                    <span class="cs-topper">Experience</span>
+                    <h2 class="cs-title">In web development and embedded systems</h2>
+                </div>
+                <!-- Right Section -->
+                <ul class="cs-right-section">
+                    <li class="cs-item">
+                        <span class="cs-number">01</span>
+                        <p class="cs-item-text">
+                            <strong>Sapientia EMTE 2019-2023: </strong> Automatization and applied informatics
+                        </p>
+                    </li>
+                    <li class="cs-item">
+                        <span class="cs-number">02</span>
+                        <p class="cs-item-text">
+                            <strong>Webapix kft. 2022 Summer </strong> Intern at Webapix kft. at Budapest developing
+                            websites in Laravel.
+                        </p>
+                    </li>
+                    <li class="cs-item">
+                        <span class="cs-number">03</span>
+                        <p class="cs-item-text">
+                            <strong>Marquardt Schaltsysteme SCS: </strong> Software Engineer at Marquardt in automotive
+                            industry working with nfc, capacity technologies.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Lukács Szabolcs. All Rights Reserved.</p>
+        <!-- ============================================ -->
+        <!--                  PROJECTS                    -->
+        <!-- ============================================ -->
+
+        <section id="projects">
+            <div class="cs-container">
+                <div class="cs-left">
+                    <!--Big Image-->
+                    <picture class="cs-picture cs-picture1" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="assets/images/view_3d.jpg">
+                        <source media="(min-width: 601px)" srcset="assets/images/view_3d.jpg">
+                        <img loading="lazy" decoding="async" src="assets/images/view_3d.jpg" alt="pcd-design"
+                            width="672" height="672">
+                    </picture>
+                    <!--Medium Image-->
+                    <picture class="cs-picture cs-picture2" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="assets/images/shm2.png">
+                        <source media="(min-width: 601px)" srcset="assets/images/shm2.png">
+                        <img loading="lazy" decoding="async" src="assets/images/shm2.png" alt="smarthome-monitoring"
+                            width="300" height="300">
+                    </picture>
+                    <!--Small Image-->
+                    <picture class="cs-picture cs-picture3" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="assets/images/gabriella-index.png">
+                        <source media="(min-width: 601px)" srcset="assets/images/gabriella-index.png">
+                        <img loading="lazy" decoding="async" src="assets/images/gabriella-index.png" alt="gabriella-vendeghaz"
+                            width="200" height="200">
+                    </picture>
+                </div>
+                <div class="cs-content">
+                    <span class="cs-topper">Web development and microcontrollers</span>
+                    <h2 class="cs-title">Projects</h2>
+                    <ul class="cs-faq-group">
+                        <!-- Active class added as default -->
+                        <li class="cs-faq-item active">
+                            <button class="cs-button">
+                                <span class="cs-button-text">
+                                    Smart Relay
+                                </span>
+                            </button>
+                            <p class="cs-item-p">
+                                SmartHome Relay is an IoT project using an ESP32 to remotely control a relay and monitor
+                                boiler temperature via the Blynk platform. 🌡️📱 <br> Tech Stack: C, ESP32,
+                                microcontroller, KiCAD <br>
+                                <a href="https://github.com/szabilukacs/SmartHomeRelay" class="cs-button-solid-small"
+                                    target="_blank">Github</a>
+                            </p>
+
+                        </li>
+                        <li class="cs-faq-item">
+                            <button class="cs-button">
+                                <span class="cs-button-text">
+                                    Gabriella Vendégház
+                                </span>
+                            </button>
+                            <p class="cs-item-p">
+                                Modern, mobile-friendly fast website for a guesthouse. <br> Tech Stack: HTML, CSS, SEO
+                                <br>
+                                <a href="https://szallasgyergyoban.eu" class="cs-button-solid-small"
+                                    target="_blank">Megtekintés</a>
+                            </p>
+                        </li>
+                        <li class="cs-faq-item">
+                            <button class="cs-button">
+                                <span class="cs-button-text">
+                                    GardenMonitor
+                                </span>
+                            </button>
+                            <p class="cs-item-p">
+                                Smart Garden Monitoring system, is an Iot project with a microcontroller measuring
+                                temperature, humidity, ligth inside and outside also. <br> Tech Stack: php, mysql, HTML,
+                                CSS <br>
+                                <a href="https://gardenmonitor.eu" class="cs-button-solid-small"
+                                    target="_blank">Megtekintés</a>
+                            </p>
+                        </li>
+                        <li class="cs-faq-item">
+                            <button class="cs-button">
+                                <span class="cs-button-text">
+                                    Hargita Megye Buszjáratok
+                                </span>
+                            </button>
+                            <p class="cs-item-p">
+                                Website where you can find all the bus schedules in Harghita county. <br> Tech Stack:
+                                php, mysql, HTML, CSS
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me on</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/luk%C3%A1cs-szabolcs-0683751a8/" target="_blank"
+                    class="social-link">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <span>|</span>
+                <a href="https://github.com/szabilukacs" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <footer id="footer">
+        <div class="cs-container">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a href="#home" class="cs-link">Home</a>
+                </li>
+                <li class="cs-li">
+                    <a href="#experience" class="cs-link">Experience</a>
+                </li>
+                <li class="cs-li">
+                    <a href="#projects" class="cs-link">Projects</a>
+                </li>
+                <li class="cs-li">
+                    <a href="#contact" class="cs-link">Contact</a>
+                </li>
+            </ul>
+            <span class="cs-copyright">©
+                <script>document.write(new Date().getFullYear());</script> Copyright All rights reserved.
+                <a href="https://szekelycode.ro" target="_blank"><img src="assets/images/logos/SzekelyCode.jpg"
+                        alt="SzekelyCode-logo" style="height: 30px; vertical-align: middle;"></a>
+            </span>
+        </div>
     </footer>
 
-    <!-- Smooth Scrolling and Active Section JavaScript -->
-    <script src="script.js"></script>
+    <script defer src="js/nav.js"></script>
+    <script defer src="js/projects.js"></script>
+
 </body>
 
 </html>
