@@ -4,7 +4,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #home {
-    background: url("../assets/images/background.jpg");
+    background: url("../assets/images/background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
