@@ -113,8 +113,8 @@
             <picture class="cs-background">
                 <source media="(max-width: 600px)" srcset="assets/images/background-m.webp">
                 <source media="(min-width: 601px)" srcset="assets/images/background.webp">
-                <img decoding="async" src="assets/images/background.webp" alt="laptop-background"
-                    width="2250" height="1500" aria-hidden="true">
+                <img decoding="async" src="assets/images/background.webp" alt="laptop-background" width="2250"
+                    height="1500" aria-hidden="true">
             </picture>
         </section>
 
@@ -288,8 +288,9 @@
                     <a href="#contact" class="cs-link">Contact</a>
                 </li>
             </ul>
-            <span class="cs-copyright">©
-                <script>document.write(new Date().getFullYear());</script> Copyright All rights reserved.
+            <span class="cs-copyright" id="copyright">©
+                <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                Copyright All rights reserved.
                 <a href="https://szekelycode.ro" target="_blank"><img src="assets/images/logos/SzekelyCode.jpg"
                         alt="SzekelyCode-logo" style="width: 60px; height: 30px; vertical-align: middle;"></a>
             </span>
