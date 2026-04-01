@@ -4,18 +4,18 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePres
 // --- Static Data ---
 const skills = [
   { name: 'C/C++', type: 'CORE', hex: '0x43' },
-  { name: 'ARM Assembly', type: 'LOW-LEVEL', hex: '0x41' },
+  { name: 'Matlab', type: 'LOW-LEVEL', hex: '0x41' },
   { name: 'RTOS', type: 'SYS', hex: '0x52' },
   { name: 'Microcontrollers', type: 'HW', hex: '0x4D' },
-  { name: 'Embedded Linux', type: 'OS', hex: '0x4C' },
-  { name: 'Protocol Design', type: 'NET', hex: '0x50' }
+  { name: 'AUTOSAR', type: 'OS', hex: '0x4C' },
+  { name: 'Embedded C', type: 'LOW-LEVEL', hex: '0x45' }
 ];
 
 const experienceData = [
-  { year: '2019 - 2023', role: 'BSc Computer Engineering', org: 'Tech University', type: 'EDU' },
-  { year: '2023 - 2024', role: 'Junior Firmware Engineer', org: 'Workspace Alpha', type: 'WORK' },
-  { year: '2024 - 2025', role: 'Embedded Developer', org: 'Workspace Beta', type: 'WORK' },
-  { year: '2025 - Present', role: 'Senior Embedded Engineer', org: 'Workspace Gamma', type: 'WORK' }
+  { year: '2019 - 2023', role: 'BSc Automatization and applied informatics', org: 'Sapientia EMTE', type: 'EDU' },
+  { year: '2022 - 2023', role: 'Junior Software Developer', org: 'Webapix kft.', type: 'WORK' },
+  { year: '2023 - 2026', role: 'Embedded Software Developer', org: 'Marquardt Romania', type: 'WORK' },
+  { year: '2026 - Present', role: 'Embedded Software Engineer', org: 'BHE Bonn', type: 'WORK' }
 ];
 
 // --- PRELOADER: Colorful Hacker Boot Sequence ---
@@ -668,7 +668,7 @@ const Portfolio = () => {
   const allBanksPowered = solderedBanks.length === skills.length;
 
   const timelineRef = useRef(null);
-  const { scrollYProgress: timelineScroll } = useScroll({ target: timelineRef, offset: ["start center", "end center"] });
+  const { scrollYProgress: timelineScroll } = useScroll({ target: timelineRef, offset: ["start 80%", "end 80%"] });
   const traceHeight = useTransform(timelineScroll, [0, 1], ["0%", "100%"]);
 
   useEffect(() => {
@@ -964,7 +964,7 @@ const Portfolio = () => {
             <motion.div className="hero-content" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }}>
               <FloatingMCU />
               <div className="terminal-header mono"><span className="terminal-text">{terminalText}{showCursor && <span className="cursor">█</span>}</span></div>
-              <h1>Firmware & Systems<br /><span className="highlight">Architect</span></h1>
+              <h1>Embedded Software <br /><span className="highlight">Engineer</span></h1>
               <p className="subtitle">Crafting robust low-level solutions.<br />Bridging bare-metal execution with high-level architecture.</p>
               <div className="cta-buttons">
                 <motion.button className="btn-secondary" onClick={() => { triggerHaptic(); setShowCvModal(true) }} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>Download Datasheet</motion.button>
@@ -1005,14 +1005,15 @@ const Portfolio = () => {
             </div>
           </section>
 
-          {/* HIGH DENSITY PCB EXPERIENCE TIMELINE */}
-          <section className="experience" id="experience" ref={timelineRef}>
+{/* HIGH DENSITY PCB EXPERIENCE TIMELINE */}
+          <section className="experience" id="experience"> {/* <-- REMOVED ref FROM HERE */}
             <div className="section-header pcb-header">
               <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>Signal <span className="highlight">Trace</span></motion.h2>
               <p className="section-sub mono pcb-silkscreen">REV 4.2 // HIGH_DENSITY.BRD</p>
             </div>
 
-            <div className="timeline-container">
+            {/* ADDED ref HERE --> */}
+            <div className="timeline-container" ref={timelineRef}> 
               <motion.div className="data-packet" animate={{ top: ['0%', '100%'], opacity: [0, 1, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }} />
               <motion.div className="data-packet" animate={{ top: ['0%', '100%'], opacity: [0, 1, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 1.5 }} />
 
@@ -1139,14 +1140,30 @@ const Portfolio = () => {
             <div className="section-header">
               <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>Init <span className="highlight">Connection</span></motion.h2>
             </div>
-            <div className="contact-links">
-              {['GitHub', 'LinkedIn', 'Email'].map((link, i) => (
-                <motion.a key={link} href="#" className="contact-btn pcb-pad mono" whileHover="hover" whileTap={{ scale: 0.95 }} onClick={triggerHaptic}
-                  initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}>
+<div className="contact-links">
+              {[
+                { name: 'GitHub', url: 'https://github.com/szabilukacs' },
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/szabilukacs/' },
+                { name: 'Email', url: 'mailto:lukacs.szabi58@gmail.com' }
+              ].map((link, i) => (
+                <motion.a 
+                  key={link.name} 
+                  href={link.url} 
+                  target={link.name !== 'Email' ? "_blank" : undefined}
+                  rel={link.name !== 'Email' ? "noopener noreferrer" : undefined}
+                  className="contact-btn pcb-pad mono" 
+                  whileHover="hover" 
+                  whileTap={{ scale: 0.95 }} 
+                  onClick={triggerHaptic}
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  transition={{ delay: i * 0.1 }} 
+                  viewport={{ once: true }}
+                >
                   <div className="led-container">
                     <motion.span className="tx-rx-led" variants={{ hover: { opacity: [0, 1, 0, 1, 1, 0], backgroundColor: ['var(--accent-primary)', '#fbbf24', 'var(--accent-primary)'] } }} transition={{ duration: 0.3, repeat: Infinity }} />
                   </div>
-                  <span className="btn-text">{link}</span>
+                  <span className="btn-text">{link.name}</span>
                   <div className="pad-trace left-trace"></div>
                   <div className="pad-trace right-trace"></div>
                 </motion.a>
