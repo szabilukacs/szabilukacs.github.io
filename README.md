@@ -1,70 +1,206 @@
-# Getting Started with Create React App
+# Embedded Systems Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive portfolio website for embedded C developers built with React and Framer Motion.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+✨ **Smooth Animations** - Powered by Framer Motion for buttery-smooth transitions
+🎮 **Binary Decoder Game** - Interactive game where users decode binary to decimal values
+📊 **Live System Monitor** - Animated real-time CPU, memory, and temperature display
+🎨 **Modern Design** - Dark terminal-inspired theme with electric blue accents
+🖱️ **Custom Cursor** - Smooth custom cursor with spring physics
+📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile
+⚡ **Interactive Elements** - Circuit board background, animated microchip, skill bars
+🚀 **Performance Optimized** - Lightweight and fast
 
-### `npm start`
+## Sections
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Home** - Hero section with animated microchip and terminal greeting
+2. **About** - Personal introduction with expertise tags and live system monitor
+3. **Binary Game** - Interactive binary-to-decimal converter game with scoring
+4. **Skills** - Animated progress bars showcasing technical expertise
+5. **Contact** - Social links and contact information
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Game Instructions
 
-### `npm test`
+The **Binary Decoder** is an interactive game where:
+- You see 8 bits (binary digits) that you can click to flip between 0 and 1
+- A target decimal number is displayed
+- Click the bits to match the target value
+- Score points for each correct answer
+- The game automatically generates new challenges
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
 
-### `npm run build`
+- **React** - Frontend framework
+- **Framer Motion** - Animation library
+- **CSS-in-JS** - Styled with JSX style blocks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js 16+ and npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup
 
-### `npm run eject`
+1. **Create a new React app:**
+```bash
+npx create-react-app embedded-portfolio
+cd embedded-portfolio
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install Framer Motion:**
+```bash
+npm install framer-motion
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Replace the default App.js:**
+- Copy the contents of `portfolio.jsx` 
+- Replace `src/App.js` with the portfolio component
+- Import it as: `import Portfolio from './portfolio';`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Or simply replace `src/App.js` entirely with:
+```jsx
+import Portfolio from './Portfolio';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+function App() {
+  return <Portfolio />;
+}
 
-## Learn More
+export default App;
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+And save the portfolio.jsx file as `src/Portfolio.jsx`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Add JetBrains Mono font (optional but recommended):**
 
-### Code Splitting
+Add to `public/index.html` in the `<head>` section:
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Start the development server:**
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Visit `http://localhost:3000` to see your portfolio!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment to GitHub Pages
 
-### Making a Progressive Web App
+1. **Install gh-pages:**
+```bash
+npm install --save-dev gh-pages
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Update package.json:**
 
-### Advanced Configuration
+Add homepage field (replace YOUR_USERNAME with your GitHub username):
+```json
+{
+  "homepage": "https://YOUR_USERNAME.github.io",
+  ...
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Add deployment scripts:
+```json
+{
+  "scripts": {
+    ...
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
+```
 
-### Deployment
+3. **Deploy:**
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. **Configure GitHub Pages:**
+- Go to your repository settings
+- Navigate to Pages section
+- Select `gh-pages` branch as source
+- Your site will be live at `https://YOUR_USERNAME.github.io`
 
-### `npm run build` fails to minify
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Update Personal Information
+
+Edit the following sections in `Portfolio.jsx`:
+
+**About Section** (around line 200):
+- Update the about text with your own story
+- Modify the expertise tags with your skills
+
+**Skills** (around line 50):
+```javascript
+const skills = [
+  { name: 'Your Skill', level: 90 }, // level from 0-100
+  // Add more skills
+];
+```
+
+**Game Settings** (around line 20):
+- Adjust initial target value range
+- Modify scoring system
+- Customize messages
+
+**Navigation & Content:**
+- Update the logo name in the nav section
+- Modify hero section text
+- Update contact links with your actual URLs
+- Change footer text
+
+### Color Scheme
+
+The main accent color is electric blue (#00f2fe). To change it:
+- Search for `#00f2fe` and `#4facfe` in the file
+- Replace with your preferred colors
+- Update gradient definitions
+
+### Typography
+
+The site uses JetBrains Mono font. To change:
+- Update the `font-family` in the CSS
+- Add your chosen font via Google Fonts in `index.html`
+
+## File Structure
+
+```
+embedded-portfolio/
+├── public/
+│   └── index.html
+├── src/
+│   ├── Portfolio.jsx    # Main portfolio component
+│   ├── App.js           # App entry point
+│   └── index.js
+└── package.json
+```
+
+## Performance Tips
+
+- Images are minimal (SVG microchip)
+- Animations use CSS transforms for GPU acceleration
+- Framer Motion uses lazy loading
+- Responsive images for mobile devices
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## License
+
+MIT License - feel free to use and modify for your own portfolio!
+
+## Credits
+
+Built with ❤️ using React and Framer Motion
