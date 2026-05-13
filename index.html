@@ -1,0 +1,1426 @@
+﻿<!DOCTYPE html>
+<html lang="hu-HU" class="no-js scheme_default">
+
+<head>
+    <title>Evolution Rezidencia &#8211; Modern otthonok Gyergyószentmiklóson</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/cropped-fav-big-300x300.jpg" />
+    <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="js/vendor/hotspot/css/tooltipster.css" type="text/css" media="all">
+    <link rel="stylesheet" href="js/vendor/mediaelement/css/mediaelementplayer.css" type="text/css" media="all">
+    <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css" type="text/css" media="all">
+    <style id="rs-plugin-settings-inline-css" type="text/css">
+        .slide_title {
+            text-shadow: 0 2px 24px rgba(0,0,0,0.95), 0 1px 8px rgba(0,0,0,0.8) !important;
+            color: #ffffff !important;
+        }
+        .slide_subtitle {
+            text-shadow: 0 1px 14px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.7) !important;
+            color: #ffffff !important;
+        }
+        .slide_button {
+            text-shadow: none !important;
+        }
+        /* Overlay alapból rejtett */
+        #ev_mobile_hero_overlay {
+            display: none;
+        }
+
+        /* Fotótúra slider – mobil optimalizálás */
+        @media (max-width: 767px) {
+            /* Magasság */
+            .mh530,
+            .mh530 .swiper-slide {
+                min-height: 52vh !important;
+                height: 52vh !important;
+            }
+
+            /* Szélességre húzás: container padding kompenzálása */
+            .slider_style_modern {
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+                position: relative !important;
+                overflow: hidden !important;
+            }
+
+            /* Az outer ne tartson helyet az oldalsó nyilaknak */
+            .slider_style_modern.slider_outer_controls_side {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            /* Navigáció szöveg elrejtve */
+            .slider_style_modern .slider_controls_label {
+                display: none !important;
+            }
+
+            /* Nyilak overlay-ként a kép közepére */
+            .slider_style_modern .slider_controls_wrap {
+                position: absolute !important;
+                top: 50% !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                transform: translateY(-50%) !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 0 12px !important;
+                box-sizing: border-box !important;
+                z-index: 10 !important;
+                pointer-events: none !important;
+            }
+            .slider_style_modern .slider_prev,
+            .slider_style_modern .slider_next {
+                pointer-events: auto !important;
+                position: static !important;
+                top: auto !important;
+                transform: none !important;
+                width: 44px !important;
+                height: 44px !important;
+                min-width: 44px !important;
+                border-radius: 50% !important;
+                background: rgba(0,0,0,0.3) !important;
+                backdrop-filter: blur(6px) !important;
+                -webkit-backdrop-filter: blur(6px) !important;
+                border: 1.5px solid rgba(255,255,255,0.5) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .slider_style_modern .slider_prev::after,
+            .slider_style_modern .slider_next::after {
+                color: #fff !important;
+                font-size: 16px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            /* RevSlider caption-ök elrejtése mobilon */
+            #slide-1-layer-5,
+            #slide-1-layer-1,
+            #slide-1-layer-2,
+            #slide-1-layer-3 {
+                display: none !important;
+            }
+            /* Mobil overlay megjelenítése */
+            #ev_mobile_hero_overlay {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                z-index: 20;
+                padding-top: 12%;
+                box-sizing: border-box;
+                pointer-events: none;
+                text-align: center;
+            }
+            .ev_mh_subtitle {
+                font-family: Georgia, serif;
+                font-style: italic;
+                font-size: clamp(13px, 3.8vw, 18px);
+                color: #fff;
+                letter-spacing: 0.08em;
+                text-shadow: 0 1px 10px rgba(0,0,0,0.9);
+                margin: 0 0 10px;
+            }
+            .ev_mh_title {
+                font-size: clamp(28px, 8.5vw, 46px);
+                line-height: 1.15;
+                color: #fff;
+                font-weight: 900;
+                letter-spacing: 0.04em;
+                text-shadow: 0 2px 20px rgba(0,0,0,0.95), 0 1px 6px rgba(0,0,0,0.8);
+                margin: 0 0 28px;
+                padding: 0 5%;
+            }
+            .ev_mh_button {
+                pointer-events: auto;
+                display: inline-block;
+                border: 2px solid #fff;
+                border-radius: 50px;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                padding: 13px 32px;
+                text-decoration: none;
+                background: rgba(0,0,0,0.38);
+                box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                transition: background 0.2s, box-shadow 0.2s;
+            }
+            .ev_mh_scroll {
+                display: none;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <link rel='stylesheet' href='js/vendor/swiper/swiper.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='js/vendor/magnific/magnific-popup.min.css' type='text/css' media='all' />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='css/font-face/css/fonts_pack.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/fontello/css/fontello-embedded.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/animation.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/template-color.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
+
+</head>
+
+<body class="home page preloader blog_style_excerpt sidebar_hide expand_content remove_margins header_style_header-1 header_title_off menu_style_left menu_style_side anchor_slide">
+    <div class="body_wrap">
+        <div class="page_wrap">
+            <header class="top_panel top_panel_style_1 without_bg_image scheme_side">
+                <div class="header_widgets_wrap widget_area header_fullwidth">
+                    <div class="header_widgets_wrap_inner widget_area_inner">
+                        <aside id="trx_addons_widget_slider-3" class="widget widget_slider">
+                            <div class="slider_wrap slider_engine_revo slider_alias_homeslider-1">
+                                <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container">
+                                    <div id="rev_slider_1_1" class="rev_slider fullscreenbanner" data-version="5.2.6">
+                                        <ul>
+                                            <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Linear.easeNone" data-easeout="Linear.easeNone" data-masterspeed="default" data-rotate="0" data-saveperformance="off"
+                                                data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+
+                                                <img src="images/epulet-front.jpeg" alt="" title="bg_header" width="1920" height="914" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.72) 100%);z-index:5;pointer-events:none;"></div>
+
+                                                <div class="tp-caption   tp-resizeme  slide_subtitle" id="slide-1-layer-5" data-x="center" data-hoffset="" data-y="center" data-voffset="-110" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:500;e:Power2.easeOut;"
+                                                    data-transform_out="opacity:0;s:300;" data-start="600" data-splitin="none" data-splitout="none" data-responsive_offset="on">Fedezze fel </div>
+
+                                                <h1 class="tp-caption   tp-resizeme  slide_title" id="slide-1-layer-1" data-x="center" data-hoffset="" data-y="center" data-voffset="-20" data-width="['1024']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:500;e:Power2.easeOut;"
+                                                    data-transform_out="opacity:0;s:300;" data-start="900" data-splitin="none" data-splitout="none" data-responsive_offset="on">MODERN OTTHONOK<br> GYERGYÓSZENTMIKLÓSON </h1>
+
+                                                <div class="tp-caption rev-btn  tp-resizeme  theme_button slide_button" id="slide-1-layer-2" data-x="center" data-hoffset="" data-y="center" data-voffset="150" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+                                                    data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);" data-transform_in="y:50px;opacity:0;s:500;e:Power2.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1200" data-splitin="none"
+                                                    data-splitout="none" data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"#sc_anchor_contacts","delay":""}]' data-responsive_offset="on">Tudjon meg többet </div>
+
+                                                <div class="tp-caption   tp-resizeme  slide_scroll" id="slide-1-layer-3" data-x="center" data-hoffset="" data-y="bottom" data-voffset="40" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="opacity:0;s:500;e:Power2.easeOut;"
+                                                    data-transform_out="opacity:0;s:300;" data-start="1500" data-splitin="none" data-splitout="none" data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]' data-responsive_offset="on">
+                                                    <div class="theme_scroll_down">Felfedezés</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="tp-bannertimer tp-bottom"></div>
+                                    </div>
+                                    <!-- Mobil hero overlay – RevSlider caption-öktől független -->
+                                    <div id="ev_mobile_hero_overlay">
+                                        <p class="ev_mh_subtitle">Fedezze fel</p>
+                                        <h1 class="ev_mh_title">MODERN OTTHONOK<br>GYERGYÓSZENTMIKLÓSON</h1>
+                                        <a href="#sc_anchor_contacts" class="ev_mh_button">Tudjon meg többet</a>
+                                        <div class="ev_mh_scroll">Felfedezés<br>↓</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </header>
+            <div class="menu_side_wrap scheme_side">
+                <span class="menu_side_button icon-menu-2"></span>
+                <div class="menu_side_inner">
+                    <a class="logo" href="#top">
+                        <img src="images/logo.png" class="logo_main" alt="" width="132" height="127">
+                    </a>
+                    <div class="toc_menu_item">
+                        <a href="#" class="toc_menu_description menu_mobile_description">
+                            <span class="toc_menu_description_title">Főmenü</span>
+                        </a>
+                        <a class="menu_mobile_button toc_menu_icon icon-menu-2" href="#"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu_mobile_overlay"></div>
+            <div class="menu_mobile scheme_dark">
+                <div class="menu_mobile_inner">
+                    <a class="menu_mobile_close icon-cancel"></a>
+                    <a class="logo" href="#top">
+                        <img src="images/logo.png" class="logo_main" alt="" width="132" height="127">
+                    </a>
+                    <nav class="menu_mobile_nav_area">
+                        <ul id="menu_mobile" class="menu_mobile_nav">
+                            <li class="menu-item current-menu-item current_page_item">
+                                <a href="index.html">Főoldal</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="gallery.html">Galéria</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="rent.html">Bérlés</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="contacts.html">Kapcsolat</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search_mobile">
+                        <div class="search_form_wrap">
+                            <form role="search" method="get" class="search_form" action="#">
+                                <input type="text" class="search_field" placeholder="Search ..." value="" name="s">
+                                <button type="submit" class="search_submit icon-search" title="Start search"></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="socials_mobile">
+                        <span class="social_item">
+							<a href="#" target="_blank" class="social_icons social_facebook">
+								<span class="trx_addons_icon-facebook"></span>
+                        </a>
+                        </span>
+                        <span class="social_item">
+							<a href="#" target="_blank" class="social_icons social_instagram">
+								<span class="trx_addons_icon-instagram"></span>
+                        </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page_content_wrap scheme_default">
+                <div class="content">
+                    <article class="post_item_single page">
+                        <div class="post_content entry-content">
+
+                            <section class="full-height-section no-col-padding columns-stretch content-middle">
+                                <div class="container">
+                                    <div class="row">
+                                        <a id="sc_anchor_new_complex" class="sc_anchor sc_anchor_default" title="Bemutatkozás" data-icon="icon-note-2" data-url=""></a>
+                                        <div class="columns_wrap">
+                                            <div class="column_container column-1_1">
+                                                <div class="column-inner">
+                                                    <div class="height_large"></div>
+                                                    <div class="sc_promo sc_promo_modern sc_promo_size_large sc_promo_no_paddings sc_promo_image_position_right sc_promo_image_width_50p">
+                                                        <div class="sc_promo_image_wrap">
+                                                            <div class="sc_promo_image bg_image_1"></div>
+                                                            <a class="sc_promo_link2" href="#sc_anchor_plans">
+                                                                <span>Több</span>
+                                                                <span>KÉP</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="sc_promo_text">
+                                                            <div class="sc_promo_text_inner">
+                                                                <h6 class="sc_item_subtitle sc_promo_subtitle sc_align_default sc_item_title_style_default">Minőségi Lakások</h6>
+                                                                <h2 class="sc_item_title sc_promo_title sc_align_default sc_item_title_style_default">Bemutatkozik az Evolution Rezidencia</h2>
+                                                                <div class="sc_item_descr sc_promo_descr sc_align_default">Gyergyószentmiklóson, a város nyugodt, mégis jól megközelíthető részén valósul meg lakóparkunk, amely a modern élet igényeire szabott, minőségi otthonokat kínál. A korszerű műszaki megoldások, az átgondolt tervezés és a természet közelsége harmonikusan egészítik ki egymást.</div>
+                                                                <div class="sc_item_button sc_item_button_simple sc_promo_button sc_align_default sc_button_wrap">
+                                                                    <a href="#sc_anchor_services" class="sc_button sc_button_simple sc_button_size_normal sc_button_icon_left">
+                                                                        <span class="sc_button_text">
+																			<span class="sc_button_title">Bővebben</span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="height_large"></div>
+                                                    <div class="row">
+                                                        <div class="columns_wrap">
+                                                            <div class="column_container column-1_1 scheme_dark">
+                                                                <div class="column-inner pn">
+                                                                    <div id="sc_skills_1" class="sc_skills sc_skills_counter" data-type="counter">
+                                                                        <div class="sc_skills_columns sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
+                                                                            <div class="sc_skills_column trx_addons_column-1_4">
+                                                                                <div class="sc_skills_item_wrap">
+                                                                                    <div class="sc_skills_item">
+                                                                                        <div class="sc_skills_total" data-start="0" data-stop="56" data-step="1" data-max="60" data-speed="53" data-duration="2968" data-ed="">0</div>
+                                                                                    </div>
+                                                                                    <div class="sc_skills_item_title">Prémium Lakás</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="sc_skills_column trx_addons_column-1_4">
+                                                                                <div class="sc_skills_item_wrap">
+                                                                                    <div class="sc_skills_item">
+                                                                                        <div class="sc_skills_total" data-start="0" data-stop="112" data-step="2" data-max="120" data-speed="53" data-duration="2968" data-ed="">0</div>
+                                                                                    </div>
+                                                                                    <div class="sc_skills_item_title">Hálószoba</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="sc_skills_column trx_addons_column-1_4">
+                                                                                <div class="sc_skills_item_wrap">
+                                                                                    <div class="sc_skills_item">
+                                                                                        <div class="sc_skills_total" data-start="0" data-stop="3800" data-step="50" data-max="4000" data-speed="40" data-duration="304" data-ed="">0</div>
+                                                                                    </div>
+                                                                                    <div class="sc_skills_item_title">Négyzetméter</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="sc_skills_column trx_addons_column-1_4">
+                                                                                <div class="sc_skills_item_wrap">
+                                                                                    <div class="sc_skills_item">
+                                                                                        <div class="sc_skills_total" data-start="0" data-stop="15" data-step="1" data-max="20" data-speed="200" data-duration="3000" data-ed="">0</div>
+                                                                                    </div>
+                                                                                    <div class="sc_skills_item_title">Év tapasztalat</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="height_large"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_3">
+                                <div class="container">
+                                    <div class="row">
+                                        <a id="sc_anchor_photo_tour" class="sc_anchor sc_anchor_default" title="Fotótúra" data-icon="icon-home-2" data-url=""></a>
+                                        <div class="columns_wrap">
+                                            <div class="column_container column-1_1">
+                                                <div class="column-inner">
+                                                    <div class="height_large"></div>
+                                                    <div class="sc_promo sc_promo_default sc_promo_size_large sc_promo_no_paddings sc_promo_no_image">
+                                                        <div class="sc_promo_text">
+                                                            <div class="sc_promo_text_inner">
+                                                                <h6 class="sc_item_subtitle sc_promo_subtitle sc_align_center sc_item_title_style_shadow">02</h6>
+                                                                <h2 class="sc_item_title sc_promo_title sc_align_center sc_item_title_style_shadow">Fotótúra</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="height_medium"></div>
+                                                    <div class="widget_area sc_widget_slider">
+                                                        <aside class="widget widget_slider">
+                                                            <div class="slider_wrap slider_engine_swiper">
+                                                                <div class="slider_swiper_outer slider_style_modern slider_outer_controls slider_outer_controls_side slider_outer_pagination slider_outer_pagination_fraction slider_outer_notitles slider_outer_one">
+                                                                    <div class="slider_swiper swiper-slider-container slider_height_auto slider_controls slider_controls_side slider_pagination slider_pagination_fraction slider_notitles slider_one mh530" data-ratio="1170:658" data-interval="7000" data-effect="slide" data-pagination="fraction"
+                                                                        data-slides-per-view="1" data-slides-space="0">
+                                                                        <div class="swiper-wrapper">
+                                                                            <div class="swiper-slide slider_image_1" data-image="images/epulet-front.jpeg" style="background-image:url('images/epulet-front.jpeg');background-size:cover;background-position:center;" data-cats="&lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Apartment&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Environment&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Interior&lt;/a&gt;"
+                                                                                data-title="Épület homlokzat" data-date="July 16, 2016">
+                                                                                <a href="#" class="slide_link"></a>
+                                                                            </div>
+                                                                            <div class="swiper-slide slider_image_2" data-image="images/homlokzat-kozel.jpeg" style="background-image:url('images/homlokzat-kozel.jpeg');background-size:cover;background-position:center;" data-cats="&lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Interior&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Process&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Visualizing Complex&lt;/a&gt;"
+                                                                                data-title="Homlokzat közelről" data-date="July 12, 2016">
+                                                                                <a href="#" class="slide_link"></a>
+                                                                            </div>
+                                                                            <div class="swiper-slide slider_image_3" data-image="images/udvar-pavilon.jpeg" style="background-image:url('images/udvar-pavilon.jpeg');background-size:cover;background-position:center;" data-cats="&lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Apartment&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Interior&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Views&lt;/a&gt;"
+                                                                                data-title="Udvar – Pavilon" data-date="July 9, 2016">
+                                                                                <a href="#" class="slide_link"></a>
+                                                                            </div>
+                                                                            <div class="swiper-slide slider_image_4" data-image="images/udvar-viztukro.jpeg" style="background-image:url('images/udvar-viztukro.jpeg');background-size:cover;background-position:center;" data-cats="&lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Environment&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Interior&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Process&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Views&lt;/a&gt;"
+                                                                                data-title="Udvari víztükör" data-date="July 4, 2016">
+                                                                                <a href="#" class="slide_link"></a>
+                                                                            </div>
+                                                                            <div class="swiper-slide slider_image_5" data-image="images/belter-haloszoba.jpeg" style="background-image:url('images/belter-haloszoba.jpeg');background-size:cover;background-position:center;" data-cats="&lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Interior&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Process&lt;/a&gt;, &lt;a href=&quot;#&quot; rel=&quot;category tag&quot;&gt;Visualizing Complex&lt;/a&gt;"
+                                                                                data-title="Beltér" data-date="July 2, 2016">
+                                                                                <a href="#" class="slide_link"></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="slider_controls_wrap">
+                                                                        <a class="slider_prev swiper-button-prev" href="#">
+                                                                            <span class="slider_controls_label">
+																				<span>Előző</span>
+                                                                            <span>KÉP</span>
+                                                                            </span>
+                                                                        </a>
+                                                                        <a class="slider_next swiper-button-next" href="#">
+                                                                            <span class="slider_controls_label">
+																				<span>Következő</span>
+                                                                            <span>KÉP</span>
+                                                                            </span>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="slider_pagination_wrap swiper-pagination"></div>
+                                                                </div>
+                                                            </div>
+                                                        </aside>
+                                                    </div>
+                                                    <div class="height_large"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+<section class="no-col-padding columns-stretch content-middle">
+                                <div class="container">
+                                    <div class="row">
+                                        <a id="sc_anchor_plans" class="sc_anchor sc_anchor_default" title="Lakástípusok" data-icon="icon-floor" data-url=""></a>
+                                        <div class="columns_wrap">
+                                            <div class="column_container column-1_1">
+                                                <div class="column-inner">
+                                                    <div class="height_large"></div>
+                                                    <div class="sc_content sc_content_default">
+                                                        <h6 class="sc_item_subtitle sc_content_subtitle sc_align_center sc_item_title_style_shadow">03</h6>
+                                                        <h2 class="sc_item_title sc_content_title sc_align_center sc_item_title_style_shadow">Lakástípusok</h2>
+                                                    </div>
+                                                    <div class="height_tiny"></div>
+                                                    <div id="slider_plans" class="widget_area sc_widget_slider">
+                                                        <aside id="slider_plans_widget" class="widget widget_slider">
+                                                            <div class="slider_wrap slider_engine_swiper">
+                                                                <div id="slider_plans_outer" class="slider_swiper_outer slider_style_default slider_outer_nocontrols slider_outer_nopagination slider_outer_notitles slider_outer_one">
+                                                                    <div id="slider_plans_swiper" class="slider_swiper swiper-slider-container slider_height_auto slider_nocontrols slider_nopagination slider_notitles slider_one slider_noresize" data-ratio="370:208" data-interval="10000" data-effect="fade" data-pagination="bullets"
+                                                                        data-slides-per-view="1" data-slides-space="0">
+                                                                        <div class="swiper-wrapper">
+                                                                            <div class="swiper-slide" data-title="1 Szobás">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">1 SZOBÁS LAKÁS</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Emelet</strong>
+                                                                                                            <em>4</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Szoba</strong>
+                                                                                                            <em>2</em>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-01.jpg" alt="1 szobás lakás alaprajza – normál elrendezés" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="1 Szobás Sarok">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">1 SZOBÁS SAROKLAKÁS</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Ablak</strong>
+                                                                                                            <em>4</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Alapterület (m²)</strong>
+                                                                                                            <em>76.94</em>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-02.jpg" alt="1 szobás saroklakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="2 Szobás">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">2 SZOBÁS LAKÁS</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Parkolás</strong>
+                                                                                                            <em>YES</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Ár</strong>
+                                                                                                            <span class="trx_addons_accent">
+																												<em>
+																													€ 2 000/m<sup>2</sup>
+																												</em>
+																											</span>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-03.jpg" alt="2 szobás lakás alaprajza – normál elrendezés" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="2 Szobás Sarok">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">2 SZOBÁS EGYENES SAROK</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Emelet</strong>
+                                                                                                            <em>3</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Szoba</strong>
+                                                                                                            <em>1</em>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-04.jpg" alt="2 szobás egyenes saroklakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="2 Szobás Kibővített">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">2 SZOBÁS KIBŐVÍTETT SAROK</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Ablak</strong>
+                                                                                                            <em>3</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Alapterület (m²)</strong>
+                                                                                                            <em>46.80</em>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-05.jpg" alt="2 szobás kibővített egyenes saroklakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="2 Szobás Ferde Sarok">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">2 SZOBÁS FERDE SAROK</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Parkolás</strong>
+                                                                                                            <em>NO</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Ár</strong>
+                                                                                                            <span class="trx_addons_accent">
+																												<em>€ 1 200/m<sup>2</sup>
+																												</em>
+																											</span>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-06.jpg" alt="2 szobás ferde saroklakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="2 Szobás Visszahúzott">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">2 SZOBÁS VISSZAHÚZOTT</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Emelet</strong> 5</li>
+                                                                                                        <li>
+                                                                                                            <strong>Szoba</strong> 5</li>
+                                                                                                        <li>
+                                                                                                            <strong>Ablak</strong> 14</li>
+                                                                                                        <li>
+                                                                                                            <strong>Alapterület (m²)</strong>
+                                                                                                            <em>158.88</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Parkolás</strong>
+                                                                                                            <em>YES</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Ár</strong>
+                                                                                                            <span class="trx_addons_accent">
+																												<em>€ 2 500/m<sup>2</sup>
+																												</em>
+																											</span>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-07.jpg" alt="2 szobás visszahúzott emeleti lakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="2 Szobás Visszahúzott Sarok">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">2 SZOBÁS VISSZAHÚZOTT SAROK</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Emelet</strong> 6</li>
+                                                                                                        <li>
+                                                                                                            <strong>Szoba</strong> 3</li>
+                                                                                                        <li>
+                                                                                                            <strong>Ablak</strong> 6</li>
+                                                                                                        <li>
+                                                                                                            <strong>Alapterület (m²)</strong>
+                                                                                                            <em>120.00</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Parkolás</strong>
+                                                                                                            <em>YES</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Ár</strong>
+                                                                                                            <span class="trx_addons_accent">
+																												<em>€ 2 200/m<sup>2</sup>
+																												</em>
+																											</span>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-08.jpg" alt="2 szobás visszahúzott emeleti saroklakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="3 Szobás Visszahúzott Vég">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">3 SZOBÁS VISSZAHÚZOTT VÉG</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Emelet</strong> 7</li>
+                                                                                                        <li>
+                                                                                                            <strong>Szoba</strong> 4</li>
+                                                                                                        <li>
+                                                                                                            <strong>Ablak</strong> 12</li>
+                                                                                                        <li>
+                                                                                                            <strong>Alapterület (m²)</strong>
+                                                                                                            <em>200.00</em>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-09.jpg" alt="3 szobás visszahúzott emeleti véglakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="swiper-slide" data-title="3 Szobás Visszahúzott Sarok">
+                                                                                <div class="slide_content">
+                                                                                    <div class="row">
+                                                                                        <div class="columns_wrap">
+                                                                                            <div class="column_container column-1_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <h4>
+                                                                                                        <span class="trx_addons_accent">3 SZOBÁS VISSZAHÚZOTT SAROK</span>
+                                                                                                    </h4>
+                                                                                                    <ul class="trx_addons_list trx_addons_list_parameters">
+                                                                                                        <li>
+                                                                                                            <strong>Parkolás</strong>
+                                                                                                            <em>YES</em>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <strong>Ár</strong>
+                                                                                                            <span class="trx_addons_accent">
+																												<em>€ 3 000/m<sup>2</sup>
+																												</em>
+																											</span>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                    <div class="height_small"></div>
+                                                                                                    <div class="sc_item_button sc_button_wrap">
+                                                                                                        <a href="#sc_anchor_contacts" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                                                                                            <span class="sc_button_text">
+                                                                                                                <span class="sc_button_title">Időpont egyeztetés</span>
+                                                                                                            </span>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="column_container column-2_3">
+                                                                                                <div class="column-inner">
+                                                                                                    <figure>
+                                                                                                        <div>
+                                                                                                            <img src="images/apt-10.jpg" alt="3 szobás visszahúzott emeleti saroklakás alaprajza" style="width:100%;height:400px;object-fit:contain;background:#F6F6F6;" />
+                                                                                                        </div>
+                                                                                                    </figure>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </aside>
+                                                    </div>
+                                                    <div class="lakastipusok-dots" id="lakastipusok-dots"></div>
+                                                    <div class="height_large hide_on_mobile"></div>
+                                                    <div class="height_tiny"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="no-col-padding no-row-margin">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="columns_wrap">
+                                            <div class="column_container column-1_1">
+                                                <div class="column-inner phn">
+                                                    <div id="slider_controller_1311150448" class="sc_slider_controller sc_slider_controller_titles" data-slider-id="slider_plans" data-style="titles" data-controls="1" data-interval="0" data-effect="slide" data-slides-per-view="5" data-slides-space="0" data-height="123px"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_3">
+                                <div class="container">
+                                    <div class="row">
+                                        <a id="sc_anchor_services" class="sc_anchor sc_anchor_default" title="Felszereltség" data-icon="icon-tools" data-url=""></a>
+                                        <div class="columns_wrap">
+                                            <div class="column_container column-2_3">
+                                                <div class="column-inner">
+                                                    <div class="height_large"></div>
+                                                    <div class="sc_content sc_content_default" style="color:#283E28;">
+                                                        <h6 class="sc_item_subtitle sc_content_subtitle sc_align_default sc_item_title_style_default" style="color:#283E28;">Lakás felszereltség</h6>
+                                                        <h2 class="sc_item_title sc_content_title sc_align_default sc_item_title_style_default" style="color:#283E28;">KORSZERŰ MEGOLDÁSOK,<br>ÁTGONDOLT TERVEZÉS</h2>
+                                                    </div>
+                                                    <div class="height_small"></div>
+                                                    <div class="row">
+                                                        <div class="columns_wrap">
+                                                            <div class="column_container column-5_6">
+                                                                <div class="column-inner phn">
+                                                                    <div class="sc_services sc_services_iconed" data-slides-per-view="3" data-slides-min-width="250">
+                                                                        <div class="sc_services_columns sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
+                                                                            <div class="trx_addons_column-1_3 ">
+                                                                                <div class="sc_services_item without_content with_icon sc_services_item_featured_top">
+                                                                                    <div class="sc_services_item_header">
+                                                                                        <a href="#" class="sc_services_item_icon sc_icon_type_svg">
+                                                                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+                                                                                                <path stroke-width="25" stroke-miterlimit="10" d="M205.346,275.382h58.393c34.282,0,62.173-27.891,62.173-62.173c0-34.282-27.891-62.173-62.173-62.173h-58.65V355.84h0.257V275.382z"/>
+                                                                                                <rect x="14.5" y="14.5" stroke-width="25" stroke-miterlimit="10" width="473" height="473"/>
+                                                                                                <rect x="82.768" y="82.768" stroke-width="25" stroke-miterlimit="10" width="336.463" height="336.463"/>
+                                                                                            </svg>
+                                                                                        </a>
+                                                                                        <h6 class="sc_services_item_title"><a href="#">Mélygarázs</a></h6>
+                                                                                        <div class="sc_services_item_subtitle"><a href="#">92 férőhelyes zárt mélygarázs</a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="trx_addons_column-1_3 ">
+                                                                                <div class="sc_services_item without_content with_icon sc_services_item_featured_top">
+                                                                                    <div class="sc_services_item_header">
+                                                                                        <a href="#" class="sc_services_item_icon sc_icon_type_svg">
+                                                                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+                                                                                                <rect x="38.5" y="19.489" stroke-width="25" stroke-miterlimit="10" width="423" height="461.021"/>
+                                                                                                <line stroke-width="25" stroke-miterlimit="10" x1="25.5" y1="143.5" x2="473.5" y2="143.5"/>
+                                                                                                <rect x="150" y="200" stroke-width="25" stroke-miterlimit="10" width="200" height="120" rx="10"/>
+                                                                                                <circle cx="250" cy="420" r="30" stroke-width="25" stroke-miterlimit="10"/>
+                                                                                            </svg>
+                                                                                        </a>
+                                                                                        <h6 class="sc_services_item_title"><a href="#">Lift</a></h6>
+                                                                                        <div class="sc_services_item_subtitle"><a href="#">Akadálymentes megközelítés</a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="trx_addons_column-1_3 ">
+                                                                                <div class="sc_services_item without_content with_icon sc_services_item_featured_top">
+                                                                                    <div class="sc_services_item_header">
+                                                                                        <a href="#" class="sc_services_item_icon sc_icon_type_svg">
+                                                                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+                                                                                                <path stroke-width="25" stroke-miterlimit="10" d="M499.999,428.258c-20.349,0-31.185,7.3-39.892,13.165c-7.05,4.749-11.709,7.887-22.611,7.887c-10.903,0-15.563-3.139-22.612-7.888c-8.708-5.865-19.544-13.165-39.892-13.165c-20.349,0-31.185,7.3-39.892,13.165c-7.05,4.749-11.707,7.888-22.61,7.888c-10.902,0-15.559-3.139-22.609-7.888c-8.707-5.865-19.543-13.165-39.89-13.165c-20.348,0-31.183,7.3-39.889,13.166c-7.049,4.749-11.706,7.888-22.608,7.888c-10.902,0-15.559-3.139-22.609-7.888c-8.707-5.866-19.542-13.166-39.89-13.166c-20.348,0-31.183,7.3-39.89,13.165c-7.05,4.749-11.707,7.888-22.609,7.888c-10.901,0-15.559-3.139-22.608-7.888c-8.705-5.865-19.54-13.165-39.888-13.165"/>
+                                                                                                <path stroke-width="25" stroke-miterlimit="10" d="M499.999,358.258c-20.349,0-31.185,7.3-39.892,13.165c-7.05,4.749-11.709,7.887-22.611,7.887c-10.903,0-15.563-3.139-22.612-7.888c-8.708-5.865-19.544-13.165-39.892-13.165c-20.349,0-31.185,7.3-39.892,13.165c-7.05,4.749-11.707,7.888-22.61,7.888c-10.902,0-15.559-3.139-22.609-7.888c-8.707-5.865-19.543-13.165-39.89-13.165c-20.348,0-31.183,7.3-39.889,13.166c-7.049,4.749-11.706,7.888-22.608,7.888c-10.902,0-15.559-3.139-22.609-7.888c-8.707-5.866-19.542-13.166-39.89-13.166c-20.348,0-31.183,7.3-39.89,13.165c-7.05,4.749-11.707,7.888-22.609,7.888c-10.901,0-15.559-3.139-22.608-7.888c-8.705-5.865-19.54-13.165-39.888-13.165"/>
+                                                                                                <line stroke-width="25" stroke-miterlimit="10" x1="100" y1="200" x2="100" y2="50"/>
+                                                                                                <line stroke-width="25" stroke-miterlimit="10" x1="100" y1="50" x2="200" y2="50"/>
+                                                                                            </svg>
+                                                                                        </a>
+                                                                                        <h6 class="sc_services_item_title"><a href="#">Padlófűtés</a></h6>
+                                                                                        <div class="sc_services_item_subtitle"><a href="#">Energiahatékony fűtési rendszer</a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="trx_addons_column-1_3 ">
+                                                                                <div class="sc_services_item without_content with_icon sc_services_item_featured_top">
+                                                                                    <div class="sc_services_item_header">
+                                                                                        <a href="#" class="sc_services_item_icon sc_icon_type_svg">
+                                                                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+                                                                                                <rect x="25" y="100" stroke-width="25" stroke-miterlimit="10" width="450" height="300" rx="10"/>
+                                                                                                <line stroke-width="25" stroke-miterlimit="10" x1="25" y1="200" x2="475" y2="200"/>
+                                                                                                <line stroke-width="25" stroke-miterlimit="10" x1="250" y1="100" x2="250" y2="400"/>
+                                                                                            </svg>
+                                                                                        </a>
+                                                                                        <h6 class="sc_services_item_title"><a href="#">Háromrétegű nyílászárók</a></h6>
+                                                                                        <div class="sc_services_item_subtitle"><a href="#">Kiváló hő- és hangszigetelés</a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="trx_addons_column-1_3 ">
+                                                                                <div class="sc_services_item without_content with_icon sc_services_item_featured_top">
+                                                                                    <div class="sc_services_item_header">
+                                                                                        <a href="#" class="sc_services_item_icon sc_icon_type_svg">
+                                                                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+                                                                                                <path stroke-width="25" stroke-miterlimit="10" d="M346.536,119.412c-53.23-53.23-139.843-53.23-193.073,0"/>
+                                                                                                <path stroke-width="25" stroke-miterlimit="10" d="M391.801,74.148C353.98,36.329,303.621,15.5,250,15.5c-53.622,0-103.981,20.829-141.8,58.648"/>
+                                                                                                <path stroke-width="25" stroke-miterlimit="10" d="M301.273,164.674c-13.679-13.679-31.887-21.211-51.273-21.211c-19.386,0-37.595,7.532-51.273,21.211"/>
+                                                                                                <polygon stroke-width="25" stroke-miterlimit="10" points="258.682,274.249 258.682,215.335 241.318,215.335 241.318,274.249 15.695,274.249 15.695,485.937 484.305,485.937 484.305,274.249 "/>
+                                                                                            </svg>
+                                                                                        </a>
+                                                                                        <h6 class="sc_services_item_title"><a href="#">EV töltő</a></h6>
+                                                                                        <div class="sc_services_item_subtitle"><a href="#">Elektromos autótöltők a garázsban</a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="trx_addons_column-1_3 ">
+                                                                                <div class="sc_services_item without_content with_icon sc_services_item_featured_top">
+                                                                                    <div class="sc_services_item_header">
+                                                                                        <a href="#" class="sc_services_item_icon sc_icon_type_svg">
+                                                                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+                                                                                                <g>
+                                                                                                    <path stroke-width="25" stroke-miterlimit="10" d="M354.364,135.536H205.64l0.014-24.626l-17.063,0.014v25.515c-51.848,6.521-98.637,47.726-105.158,99.573h-5.704c-33.56,0-60.863,27.303-60.863,60.863c0,18.596,8.383,35.271,21.567,46.443c-13.184,11.173-21.567,27.848-21.567,46.443c0,33.56,27.303,60.863,60.864,60.863h344.541c33.561,0,60.864-27.304,60.864-60.863c0-18.596-8.383-35.271-21.567-46.443c13.185-11.174,21.567-27.848,21.567-46.443c0-33.56-27.304-60.863-60.864-60.863h-18L366.243,49.375H168.906"/>
+                                                                                                </g>
+                                                                                                <g>
+                                                                                                    <path stroke-width="25" stroke-miterlimit="10" d="M79.98,235.556c1.645,0,333.882,0,333.882,0"/>
+                                                                                                    <path stroke-width="25" stroke-miterlimit="10" d="M37.357,341.64c2.077,0,421.496,0,421.496,0"/>
+                                                                                                </g>
+                                                                                            </svg>
+                                                                                        </a>
+                                                                                        <h6 class="sc_services_item_title"><a href="#">Zöldövezetek</a></h6>
+                                                                                        <div class="sc_services_item_subtitle"><a href="#">Gondozott parkok és pihenőhelyek</a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="height_large"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_4">
+                                <div class="container">
+                                    <div class="row">
+                                        <a id="sc_anchor_neiborhoods" class="sc_anchor sc_anchor_default" title="Elhelyezkedés" data-icon="icon-map" data-url=""></a>
+                                        <div class="columns_wrap">
+                                            <div class="column_container column-2_3 push-1_3">
+                                                <div class="column-inner">
+                                                    <div class="height_large"></div>
+                                                    <div class="sc_content sc_content_default">
+                                                        <h6 class="sc_item_subtitle sc_content_subtitle sc_align_right sc_item_title_style_default">Elhelyezkedés</h6>
+                                                        <h2 class="sc_item_title sc_content_title sc_align_right sc_item_title_style_default">GYERGYÓSZENTMIKLÓS EGYIK FEJLŐDŐ VÁROSRÉSZÉBEN</h2>
+                                                        <div class="sc_content_container"></div>
+                                                    </div>
+                                                    <div class="cqtooltip-wrapper hotspots-style-1" data-opacity="1" data-tooltipanimation="grow" data-tooltipstyle="light" data-trigger="hover" data-maxwidth="240" data-marginoffset="" data-isdisplayall="off" data-displayednum="1">
+                                                        <img src="images/spacer.png" alt="" style="width:100%;height:450px;object-fit:cover;display:block;" />
+                                                        <div class="cq-hotspots">
+                                                            <div class="hotspot-item pulse-white" data-top="81%" data-left="18%">
+                                                                <a href="#" class="cq-tooltip" data-tooltip="VÁROSKÖZPONT" data-arrowposition="">
+                                                                    <span></span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="hotspot-item pulse-white" data-top="33%" data-left="35%">
+                                                                <a href="#" class="cq-tooltip" data-tooltip="ÜZLETEK" data-arrowposition="top">
+                                                                    <span></span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="hotspot-item pulse-white" data-top="36%" data-left="55%">
+                                                                <a href="#" class="cq-tooltip" data-tooltip="EGÉSZSÉGÜGY" data-arrowposition="top">
+                                                                    <span></span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="hotspot-item pulse-white" data-top="50%" data-left="94%">
+                                                                <a href="#" class="cq-tooltip" data-tooltip="ISKOLA" data-arrowposition="top">
+                                                                    <span></span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="no-col-padding columns-stretch column-xs-12 column-equal-height columns-flex scheme_side">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="columns_wrap">
+                                            <div class="column_container column-1_3">
+                                                <div class="column-inner ph15p">
+                                                    <div class="height_large"></div>
+                                                    <div class="height_huge hide_on_mobile"></div>
+                                                    <h3 class="trx_addons_no_margins sc_align_center">Kapcsolat</h3>
+                                                    <div class="height_small"></div>
+                                                    <div class="sc_content sc_content_default">
+                                                        <div class="sc_content_container">
+                                                            <div class="sc_align_center">
+                                                                <span class="trx_addons_dark">Evolution Rezidencia</span>
+                                                                <br/> Gyergyószentmiklós<br/> Románia<br/> Tel: <span class="trx_addons_dark"><a href="tel:+40700000000">+40 700 000 000</a> <br/></span> Email: <span class="trx_addons_dark"><a href="mailto:info@evolution-rezidencia.ro">info@evolution-rezidencia.ro</a>
+                                                                </span><br/><br/><strong>Fizetési feltételek:</strong><br/>5% előleg<br/>25% szerkezetkész állapotban<br/>20% gépészeti munkák befejezésekor<br/>50% átadáskor
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="height_medium"></div>
+                                                    <div class="widget_area sc_widget_socials">
+                                                        <aside class="widget widget_socials">
+                                                            <div class="socials_wrap sc_align_center">
+                                                                <span class="social_item">
+																	<a href="#" target="_blank" class="social_icons social_facebook">
+																		<span class="trx_addons_icon-facebook"></span>
+                                                                </a>
+                                                                </span><span class="social_item">
+																	<a href="#" target="_blank" class="social_icons social_instagram">
+																		<span class="trx_addons_icon-instagram"></span>
+                                                                </a>
+                                                                </span>
+                                                            </div>
+                                                        </aside>
+                                                    </div>
+                                                    <div class="height_medium"></div>
+                                                </div>
+                                            </div>
+                                            <div class="column_container column-1_3">
+                                                <div class="column-inner phn">
+                                                    <a id="sc_anchor_contacts" class="sc_anchor sc_anchor_default" title="Kapcsolat" data-icon="icon-email" data-url=""></a>
+
+
+                                                    <div id="sc_googlemap_1_wrap" class="sc_googlemap_wrap">
+                                                        <div id="sc_googlemap_1" class="sc_googlemap sc_googlemap_default h92vh" data-zoom="16" data-style="dark">
+                                                            <iframe frameborder="0" style="border: 0px; width: 100%; height: 100%;" src="https://maps.google.com/maps?t=m&amp;output=embed&amp;iwloc=near&amp;z=17&amp;q=46.7205864,25.5794935" aria-label="Evolution Rezidencia, Gyergyoszentmiklos">
+															</iframe>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="column_container column-1_3">
+                                                <div class="column-inner ph20p">
+                                                    <div class="height_large"></div>
+                                                    <div class="height_huge hide_on_mobile"></div>
+                                                    <h3 class="trx_addons_no_margins sc_align_center">ÉRDEKLŐDJÖN</h3>
+                                                    <div class="height_small"></div>
+                                                    <div class="sc_content sc_content_default">
+                                                        <div class="sc_content_container">
+                                                            <div class="sc_form sc_form_enquire sc_form_style_form_1">
+                                                                <form class="sc_form_form contact_1" method="post" action="include/contact-form.php">
+                                                                    <div class="sc_form_info">
+                                                                        <div class="trx_addons_columns_wrap columns_padding_bottom"></div>
+                                                                    </div>
+                                                                    <div class="sc_form_fields">
+                                                                        <div class="trx_addons_columns_wrap">
+                                                                            <div class="sc_form_details trx_addons_column-1_2">
+                                                                                <label class="sc_form_field sc_form_field_name required">
+																			<span class="sc_form_field_wrap">
+																				<input type="text" name="name" aria-required="true" id="contact_form_username" placeholder="Neve">
+																			</span>
+																		</label>
+                                                                                <label class="sc_form_field sc_form_field_email required">
+																			<span class="sc_form_field_wrap">
+																				<input type="text" name="email" aria-required="true" id="contact_form_email" placeholder="E-mail">
+																			</span>
+																		</label>
+                                                                            </div>
+                                                                            <div class="sc_form_message trx_addons_column-1_2">
+                                                                                <label class="sc_form_field sc_form_field_message required">
+																			<span class="sc_form_field_wrap">
+																				<textarea name="message" aria-required="true" id="contact_form_message" placeholder="Üzenete"></textarea>
+																			</span>
+																		</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="sc_form_field sc_form_field_button">
+                                                                            <button>Időpont egyeztetés</button>
+                                                                        </div>
+                                                                        <div class="trx_addons_message_box sc_form_result">
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="height_medium"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <footer class="site_footer_wrap scheme_dark">
+                <div class="copyright_wrap scheme_">
+                    <div class="copyright_wrap_inner">
+                        <div class="content_wrap">
+                            <div class="copyright_text">
+                                Evolution Rezidencia © <span id="date"></span> . Minden jog fenntartva.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <div id="page_preloader">
+        <div class="preloader_wrap preloader_square">
+            <div class="preloader_square1"></div>
+            <div class="preloader_square2"></div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='js/vendor/jquery-2.2.4.min.js'></script>
+    <script type='text/javascript' src='js/vendor/jquery-migrate.min.js'></script>
+    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type='text/javascript' src='js/vendor/_packed.js'></script>
+    <script type="text/javascript" src="js/vendor/hotspot/js/jquery.tooltipster.min.js"></script>
+    <script type="text/javascript" src="js/vendor/hotspot/js/script.min.js"></script>
+    <script type="text/javascript" src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
+
+
+    <script type='text/javascript' src='js/custom/_utils.js'></script>
+    <script type='text/javascript' src='js/custom/_main.js'></script>
+    <script type='text/javascript' src='js/custom/_date.js'></script>
+    <script type='text/javascript' src='js/custom/shortcodes.js'></script>
+    <script type='text/javascript' src='js/custom/_init.js'></script>
+    <script type="text/javascript" src="js/custom/_form_contact.js"></script>
+
+
+
+
+
+
+
+    <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
+
+    <script>
+    (function() {
+        if (window.innerWidth > 767) return;
+
+        function initMobileApartmentCarousel() {
+            var slider = document.getElementById('slider_plans_swiper');
+            if (!slider) return;
+
+            var sliderId = 'slider_plans_swiper';
+            var swiperInstance = TRX_ADDONS_STORAGE && TRX_ADDONS_STORAGE['swipers'] && TRX_ADDONS_STORAGE['swipers'][sliderId];
+            if (!swiperInstance) return;
+
+            var totalSlides = slider.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
+
+            swiperInstance.destroy(true, true);
+            slider.style.display = 'block';
+            slider.style.opacity = '1';
+
+            var dotsContainer = document.getElementById('lakastipusok-dots');
+            if (dotsContainer) {
+                dotsContainer.innerHTML = '';
+                for (var i = 0; i < totalSlides; i++) {
+                    var dot = document.createElement('span');
+                    dot.className = 'dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('data-index', i);
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            var newSwiper = new Swiper('#slider_plans_swiper', {
+                effect: 'slide',
+                slidesPerView: 1.3,
+                centeredSlides: true,
+                spaceBetween: 12,
+                speed: 400,
+                loop: true,
+                loopedSlides: totalSlides,
+                grabCursor: true,
+                touchRatio: 1,
+                initialSlide: 0,
+                autoplay: 0,
+                onSlideChangeEnd: function(swiper) {
+                    var dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+                    var activeSlide = swiper.slides[swiper.activeIndex];
+                    var realIndex = activeSlide ? parseInt(activeSlide.getAttribute('data-slide-number')) : 0;
+                    if (isNaN(realIndex)) realIndex = 0;
+                    for (var j = 0; j < dots.length; j++) {
+                        dots[j].classList.toggle('active', j === realIndex);
+                    }
+                }
+            });
+
+            TRX_ADDONS_STORAGE['swipers'][sliderId] = newSwiper;
+
+            if (dotsContainer) {
+                dotsContainer.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('dot')) {
+                        var idx = parseInt(e.target.getAttribute('data-index'));
+                        newSwiper.slideTo(idx + totalSlides);
+                    }
+                });
+            }
+        }
+
+        if (document.readyState === 'complete') {
+            setTimeout(initMobileApartmentCarousel, 500);
+        } else {
+            window.addEventListener('load', function() {
+                setTimeout(initMobileApartmentCarousel, 500);
+            });
+        }
+    })();
+    </script>
+
+    <script>
+    (function () {
+        // --- Scroll-reveal (IntersectionObserver) ---
+        var revealSelectors = [
+            '.sc_promo_block',
+            '.sc_counter_item',
+            '.sc_services_item_featured_top',
+            '.sc_content_default',
+            '.slider_controller_1311150448',
+            '.sc_item_button',
+            '.column_container'
+        ];
+        var elements = document.querySelectorAll(revealSelectors.join(','));
+        elements.forEach(function (el) {
+            el.classList.add('ev-reveal');
+        });
+
+        // Stagger amenities cards
+        var amenitiesGrid = document.querySelector('.sc_services_columns');
+        if (amenitiesGrid) amenitiesGrid.classList.add('ev-stagger');
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('ev-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.ev-reveal, .ev-stagger').forEach(function (el) {
+            observer.observe(el);
+        });
+
+        // --- Frosted glass header on scroll ---
+        var header = document.querySelector('.top_panel_header');
+        if (header) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 60) {
+                    header.classList.add('ev-scrolled');
+                } else {
+                    header.classList.remove('ev-scrolled');
+                }
+            }, { passive: true });
+        }
+    })();
+    </script>
+
+</body>
+
+</html>
