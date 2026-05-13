@@ -4,7 +4,16 @@
 <head>
     <title>Evolution Rezidencia &#8211; Modern otthonok Gyergyószentmiklóson</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Evolution Rezidencia – modern, energiahatékony lakópark Gyergyószentmiklóson. Korszerű otthonok átgondolt tervezéssel, a természet közelségében.">
+    <meta name="author" content="Evolution Rezidencia">
+    <meta name="theme-color" content="#283e28">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Evolution Rezidencia – Modern otthonok Gyergyószentmiklóson">
+    <meta property="og:description" content="Korszerű, energiahatékony lakópark Gyergyószentmiklóson. Fedezd fel a modern élet igényeire szabott, minőségi otthonokat.">
+    <meta property="og:image" content="images/og-share.jpg">
+    <meta property="og:locale" content="hu_HU">
     <link rel="icon" type="image/x-icon" href="images/cropped-fav-big-300x300.jpg" />
     <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" type="text/css" media="all">
     <link rel="stylesheet" href="js/vendor/hotspot/css/tooltipster.css" type="text/css" media="all">
@@ -1308,7 +1317,8 @@
             if (!slider) return;
 
             var sliderId = 'slider_plans_swiper';
-            var swiperInstance = TRX_ADDONS_STORAGE && TRX_ADDONS_STORAGE['swipers'] && TRX_ADDONS_STORAGE['swipers'][sliderId];
+            if (typeof TRX_ADDONS_STORAGE === 'undefined') return;
+            var swiperInstance = TRX_ADDONS_STORAGE['swipers'] && TRX_ADDONS_STORAGE['swipers'][sliderId];
             if (!swiperInstance) return;
 
             var totalSlides = slider.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
