@@ -15559,7 +15559,7 @@ label.required .sc_form_field_title:after {
 }
 
 .bg_image_1 {
-    background-image: url(../images/epulet-front.jpeg);
+    background-image: url(../images/elokert.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15573,14 +15573,14 @@ label.required .sc_form_field_title:after {
 }
 
 .bg_image_3 {
-    background-image: url(../images/udvar-viztukro.jpeg);
+    background-image: url(../images/udvar-pavilon.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .bg_image_4 {
-    background-image: url(../images/udvar-pavilon.jpeg);
+    background-image: url(../images/udvar-viztukro.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15735,7 +15735,7 @@ label.required .sc_form_field_title:after {
 }
 
 /* ===== Global rounded buttons ===== */
-.sc_button,
+.sc_button:not(.sc_button_simple),
 .sc_button.sc_button_default,
 .sc_button.sc_button_size_normal,
 .sc_button.sc_button_size_small,
@@ -15750,7 +15750,20 @@ label.required .sc_form_field_title:after {
     overflow: hidden;
 }
 
-/* Simple (outline) buttons */
+/* Simple (text+arrow) buttons – no clipping */
 .sc_button.sc_button_simple {
-    border-radius: 6px !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    position: relative !important;
+}
+
+/* ===== Felszereltség section – title backdrop blur ===== */
+.bg_image_3 .sc_content.sc_content_default {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 16px 28px;
+    margin-left: -28px;
 }

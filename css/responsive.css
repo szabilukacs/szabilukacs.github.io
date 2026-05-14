@@ -4942,3 +4942,42 @@
         height: 16px !important;
     }
 }
+
+/* ===== Felszereltség section – Mobile: centered cards with spacing ===== */
+@media (max-width: 767px) {
+    .bg_image_3 .sc_services_item.without_content {
+        background: transparent !important;
+        margin: 0 24px !important;
+    }
+    .bg_image_3 .sc_services_item.without_content .sc_services_item_header {
+        text-align: center !important;
+    }
+    .bg_image_3 .sc_services_item.without_content .sc_services_item_icon {
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
+/* ===== Elhelyezkedés section – Mobile: hotspot positions ===== */
+@media (max-width: 767px) {
+    /* 1. ZÖLDÖVEZET ÉS PIHENŐPARK */
+    .cq-hotspots .hotspot-item:nth-child(1) {
+        top: 58% !important;
+        left: 10% !important;
+    }
+    /* 2. SÉTÁNY ÉS KÖZÖSSÉGI TÉR */
+    .cq-hotspots .hotspot-item:nth-child(2) {
+        top: 80% !important;
+        left: 60% !important;
+    }
+    /* 3. PANORÁMÁS ERKÉLYEK */
+    .cq-hotspots .hotspot-item:nth-child(3) {
+        top: 15% !important;
+        left: 70% !important;
+    }
+    /* 4. EV TÖLTŐÁLLOMÁS */
+    .cq-hotspots .hotspot-item:nth-child(4) {
+        top: 55% !important;
+        left: 42% !important;
+    }
+}
