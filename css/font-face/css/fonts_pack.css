@@ -9,6 +9,7 @@
          url('../font/antonio-bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -20,6 +21,7 @@
          url('../font/antonio-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+  font-display: swap;
 }
 */
 
@@ -32,6 +34,7 @@
          url('../font/texgyretermes-italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
+  font-display: swap;
 
 }
 
@@ -42,6 +45,7 @@
        url('../font/trx_addons_icons.svg?63942586#trx_addons_icons') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'trx_addons_icons';
