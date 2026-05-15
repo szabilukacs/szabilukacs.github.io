@@ -14,12 +14,16 @@
     <meta property="og:description" content="Korszerű, energiahatékony lakópark Gyergyószentmiklóson. Fedezd fel a modern élet igényeire szabott, minőségi otthonokat.">
     <meta property="og:image" content="images/og-share.jpg">
     <meta property="og:locale" content="hu_HU">
+    <link rel="preload" href="images/epulet-front.jpeg" as="image" fetchpriority="high">
     <link rel="icon" type="image/x-icon" href="images/logo.png" />
-    <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" type="text/css" media="all">
-    <link rel="stylesheet" href="js/vendor/hotspot/css/tooltipster.css" type="text/css" media="all">
-    <link rel="stylesheet" href="js/vendor/mediaelement/css/mediaelementplayer.css" type="text/css" media="all">
+    <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="js/vendor/hotspot/css/tooltipster.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css" type="text/css" media="all">
     <style id="rs-plugin-settings-inline-css" type="text/css">
+        /* CLS fix: reserve space for hero slider before JS loads */
+        .rev_slider_wrapper.fullscreen-container { min-height: 100vh; }
+        .sc_skills_columns { min-height: 80px; }
+        .slider_swiper_outer { min-height: 200px; }
         .slide_title {
             text-shadow: 0 2px 24px rgba(0,0,0,0.95), 0 1px 8px rgba(0,0,0,0.8) !important;
             color: #ffffff !important;
@@ -180,18 +184,18 @@
 
 
 
-    <link rel='stylesheet' href='js/vendor/swiper/swiper.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='js/vendor/magnific/magnific-popup.min.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="js/vendor/magnific/magnific-popup.min.css" media="print" onload="this.media='all'">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='css/font-face/css/fonts_pack.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/fontello/css/fontello-embedded.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/animation.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/shortcodes.css' type='text/css' media='all' />
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/font-face/css/fonts_pack.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/fontello/css/fontello-embedded.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/animation.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/shortcodes.css" media="print" onload="this.media='all'">
     <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/template-color.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/template-color.css" media="print" onload="this.media='all'">
     <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
 
 </head>
@@ -210,7 +214,7 @@
                                             <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Linear.easeNone" data-easeout="Linear.easeNone" data-masterspeed="default" data-rotate="0" data-saveperformance="off"
                                                 data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
-                                                <img src="images/epulet-front.jpeg" alt="" title="bg_header" width="1920" height="914" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                <img src="images/epulet-front.jpeg" alt="" title="bg_header" width="1920" height="914" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina fetchpriority="high">
                                                 <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.72) 100%);z-index:5;pointer-events:none;"></div>
 
                                                 <div class="tp-caption   tp-resizeme  slide_subtitle" id="slide-1-layer-5" data-x="center" data-hoffset="" data-y="center" data-voffset="-110" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:500;e:Power2.easeOut;"
@@ -467,7 +471,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-01.jpg" alt="1 szobás lakás alaprajza – normál elrendezés" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-01.jpg" loading="lazy" width="800" height="600" alt="1 szobás lakás alaprajza – normál elrendezés" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -509,7 +513,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-02.jpg" alt="1 szobás saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-02.jpg" loading="lazy" width="800" height="600" alt="1 szobás saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -555,7 +559,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-03.jpg" alt="2 szobás lakás alaprajza – normál elrendezés" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-03.jpg" loading="lazy" width="800" height="600" alt="2 szobás lakás alaprajza – normál elrendezés" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -597,7 +601,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-04.jpg" alt="2 szobás egyenes saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-04.jpg" loading="lazy" width="800" height="600" alt="2 szobás egyenes saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -639,7 +643,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-05.jpg" alt="2 szobás kibővített egyenes saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-05.jpg" loading="lazy" width="800" height="600" alt="2 szobás kibővített egyenes saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -684,7 +688,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-06.jpg" alt="2 szobás ferde saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-06.jpg" loading="lazy" width="800" height="600" alt="2 szobás ferde saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -739,7 +743,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-07.jpg" alt="2 szobás visszahúzott emeleti lakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-07.jpg" loading="lazy" width="800" height="600" alt="2 szobás visszahúzott emeleti lakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -794,7 +798,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-08.jpg" alt="2 szobás visszahúzott emeleti saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-08.jpg" loading="lazy" width="800" height="600" alt="2 szobás visszahúzott emeleti saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -838,7 +842,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-09.jpg" alt="3 szobás visszahúzott emeleti véglakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-09.jpg" loading="lazy" width="800" height="600" alt="3 szobás visszahúzott emeleti véglakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -883,7 +887,7 @@
                                                                                                 <div class="column-inner">
                                                                                                     <figure>
                                                                                                         <div>
-                                                                                                            <img src="images/apt-10.jpg" alt="3 szobás visszahúzott emeleti saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
+                                                                                                            <img src="images/apt-10.jpg" loading="lazy" width="800" height="600" alt="3 szobás visszahúzott emeleti saroklakás alaprajza" style="width:100%;max-height:500px;height:auto;object-fit:contain;background:#F6F6F6;cursor:pointer;" />
                                                                                                         </div>
                                                                                                     </figure>
                                                                                                 </div>
@@ -1132,7 +1136,7 @@
                                                         <div class="sc_content_container"></div>
                                                     </div>
                                                     <div class="cqtooltip-wrapper hotspots-style-1" data-opacity="1" data-tooltipanimation="grow" data-tooltipstyle="light" data-trigger="hover" data-maxwidth="240" data-marginoffset="" data-isdisplayall="off" data-displayednum="1">
-                                                        <img src="images/spacer.png" alt="" style="width:100%;height:450px;object-fit:cover;display:block;" />
+                                                        <img src="images/spacer.png" loading="lazy" alt="" style="width:100%;height:450px;object-fit:cover;display:block;" />
                                                         <div class="cq-hotspots">
                                                             <div class="hotspot-item pulse-white" data-top="58%" data-left="-16%">
                                                                 <a href="javascript:void(0)" class="cq-tooltip" data-tooltip="ZÖLDÖVEZET" data-i18n-tooltip="hot_1" data-arrowposition="top">
@@ -1294,26 +1298,25 @@
         </div>
     </div>
 
-    <script type='text/javascript' src='js/vendor/jquery-2.2.4.min.js'></script>
-    <script type='text/javascript' src='js/vendor/jquery-migrate.min.js'></script>
-    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type='text/javascript' src='js/vendor/_packed.js'></script>
-    <script type="text/javascript" src="js/vendor/hotspot/js/jquery.tooltipster.min.js"></script>
-    <script type="text/javascript" src="js/vendor/hotspot/js/script.min.js"></script>
-    <script type="text/javascript" src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
+    <script defer src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script defer src="js/vendor/jquery-migrate.min.js"></script>
+    <script defer src="js/vendor/revslider/public/assets/js/jquery.themepunch.tools.min.js"></script>
+    <script defer src="js/vendor/revslider/public/assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script defer src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script defer src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script>
+    <script defer src="js/vendor/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script defer src="js/vendor/_packed.js"></script>
+    <script defer src="js/vendor/hotspot/js/jquery.tooltipster.min.js"></script>
+    <script defer src="js/vendor/hotspot/js/script.min.js"></script>
 
 
-    <script type='text/javascript' src='js/custom/_utils.js'></script>
-    <script type='text/javascript' src='js/custom/_main.js'></script>
-    <script type='text/javascript' src='js/custom/_date.js'></script>
-    <script type='text/javascript' src='js/custom/shortcodes.js'></script>
-    <script type='text/javascript' src='js/custom/_init.js'></script>
-    <script type="text/javascript" src="js/custom/_form_contact.js"></script>
-    <script type="text/javascript" src="js/custom/i18n.js"></script>
+    <script defer src="js/custom/_utils.js"></script>
+    <script defer src="js/custom/_main.js"></script>
+    <script defer src="js/custom/_date.js"></script>
+    <script defer src="js/custom/shortcodes.js"></script>
+    <script defer src="js/custom/_init.js"></script>
+    <script defer src="js/custom/_form_contact.js"></script>
+    <script defer src="js/custom/i18n.js"></script>
 
 
 
