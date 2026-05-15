@@ -15579,6 +15579,30 @@ label.required .sc_form_field_title:after {
     background-size: cover;
 }
 
+.bg_image_3_photo {
+    background-image: url(../images/kor-ablak.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg_image_3_photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 45, 30, 0.55);
+    z-index: 1;
+    pointer-events: none;
+}
+.bg_image_3_photo > .container {
+    position: relative;
+    z-index: 2;
+}
+
+
 .bg_image_4 {
     background-image: url(../images/udvar-viztukro.jpeg);
     background-position: center;
@@ -15588,10 +15612,12 @@ label.required .sc_form_field_title:after {
 }
 /* Smooth fade edges for bg_image sections */
 .bg_image_3,
+.bg_image_3_photo,
 .bg_image_4 {
     position: relative;
 }
 .bg_image_3::after,
+.bg_image_3_photo::after,
 .bg_image_4::before,
 .bg_image_4::after {
     content: '';
@@ -15602,7 +15628,8 @@ label.required .sc_form_field_title:after {
     z-index: 2;
     pointer-events: none;
 }
-.bg_image_3::after {
+.bg_image_3::after,
+.bg_image_3_photo::after {
     bottom: 0;
     background: linear-gradient(to bottom, transparent 0%, rgba(30, 45, 30, 0.85) 100%);
 }
@@ -15757,6 +15784,26 @@ label.required .sc_form_field_title:after {
     position: relative !important;
 }
 
+/* ===== Elhelyezkedés section – title backdrop blur (no layout shift) ===== */
+.bg_image_4 .sc_content.sc_content_default {
+    position: relative;
+    isolation: isolate;
+}
+.bg_image_4 .sc_content.sc_content_default::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -24px;
+    right: -24px;
+    bottom: -12px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* ===== Felszereltség section – title backdrop blur ===== */
 .bg_image_3 .sc_content.sc_content_default {
     display: inline-block;
@@ -15767,3 +15814,57 @@ label.required .sc_form_field_title:after {
     padding: 16px 28px;
     margin-left: -28px;
 }
+
+/* Felszereltség – hide item background at rounded corners */
+.bg_image_3 .sc_services_item {
+    background: transparent !important;
+}
+
+/* Hide social media links until accounts are set up */
+.widget_area.sc_widget_socials {
+    display: none !important;
+}
+
+/* ====== Language Switcher (floating) ====== */
+#ev-lang-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 99990;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(40, 62, 40, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(201, 169, 110, 0.4);
+    border-radius: 50px;
+    color: #F6F6F6;
+    font-family: 'Cinzel', 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+#ev-lang-btn:hover {
+    background: rgba(40, 62, 40, 1);
+    border-color: #C9A96E;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+#ev-lang-btn .ev-lang-flag {
+    font-size: 18px;
+    line-height: 1;
+}
+#ev-lang-btn .ev-lang-label {
+    color: #C9A96E;
+}
+/* Ne fedjen el más floating gombot */
+.trx_addons_scroll_to_top {
+    bottom: 80px !important;
+    right: 24px !important;
+}
+

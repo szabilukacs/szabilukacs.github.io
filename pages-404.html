@@ -1,477 +1,184 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js scheme_default">
+<html lang="hu-HU" class="no-js scheme_default">
 
 <head>
-    <title>Windsor &#8211; Modern apartment in a new residental complex</title>
+    <title>404 – Az oldal nem található | Evolution Rezidence</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" type="image/x-icon" href="images/cropped-fav-big-300x300.jpg" />
-
-
-    <link rel="stylesheet" href="js/vendor/mediaelement/css/mediaelementplayer.css" type="text/css" media="all">
-
-
-
-
-
-
-
-
-
-
-
-
-    <link rel='stylesheet' href='js/vendor/swiper/swiper.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='js/vendor/magnific/magnific-popup.min.css' type='text/css' media='all' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#283e28">
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
 
     <link rel='stylesheet' href='css/font-face/css/fonts_pack.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/fontello/css/fontello-embedded.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/animation.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/shortcodes.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/template-color.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
 
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .error404-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #283E28;
+            background-image: url(images/udvar-pavilon.jpeg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .error404-page::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(30, 45, 30, 0.8);
+            z-index: 1;
+        }
+
+        .error404-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 50px 50px 40px;
+        }
+
+        .error404-logo {
+            margin-bottom: 40px;
+        }
+
+        .error404-logo img {
+            width: 100px;
+            height: auto;
+            opacity: 1;
+        }
+
+        .error404-code {
+            font-family: 'Cinzel', serif;
+            font-size: 140px;
+            font-weight: 700;
+            color: #C9A96E;
+            line-height: 1;
+            margin: 0 0 10px 0;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+        }
+
+        .error404-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .error404-description {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            margin: 0 0 40px 0;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+        }
+
+        .error404-button {
+            display: inline-block;
+            padding: 14px 40px;
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #C9A96E;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .error404-button:hover {
+            background-color: #C9A96E;
+            color: #1a2a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 169, 110, 0.3);
+        }
+
+        .error404-footer {
+            position: relative;
+            z-index: 2;
+            margin-top: 60px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .error404-footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+
+        .error404-footer a:hover {
+            color: #C9A96E;
+        }
+
+        @media (max-width: 767px) {
+            .error404-code {
+                font-size: 90px;
+            }
+            .error404-subtitle {
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+            .error404-description {
+                font-size: 15px;
+            }
+            .error404-logo img {
+                width: 75px;
+            }
+        }
+    </style>
 </head>
 
-<body class="error404 preloader blog_style_excerpt sidebar_hide expand_content header_style_header-1 header_title_off">
-    <div class="body_wrap">
-        <div class="page_wrap">
-
-            <header class="top_panel top_panel_style_1 with_bg_image header_bg_1 scheme_side">
-                <a class="menu_mobile_button icon-menu-2"></a>
-                <div class="top_panel_fixed_wrap"></div>
-                <div class="top_panel_navi with_bg_image scheme_side">
-                    <div class="menu_main_wrap clearfix">
-                        <div class="content_wrap">
-                            <a class="logo" href="index.html">
-                                <img src="images/logo.png" class="logo_main" alt="" width="132" height="127">
-                            </a>
-                            <nav class="menu_main_nav_area menu_hover_fade">
-                                <ul id="menu_main" class="menu_main_nav">
-                                    <li class="menu-item ">
-                                        <a href="index.html">
-								Home
-							</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent">
-                                        <a href="#">
-								Pages
-							</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="pages-pricing.html">
-										Pricing table
-									</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="pages-about.html">
-										About Us
-									</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="pages-team.html">
-										Our team
-									</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="pages-services.html">
-										Services
-									</a>
-                                            </li>
-                                            <li class="menu-item current-menu-item current_page_item">
-                                                <a href="pages-404.html">
-										Page 404
-									</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="#">
-								Features
-							</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="features-typography.html">
-										Typography
-									</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="features-shortcodes.html">
-										Shortcodes
-									</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="features-events.html">
-										Events
-									</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="features-forum.html">
-										Forum
-									</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="gallery.html">
-								Gallery
-							</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="#">
-								Blog
-							</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-has-children ">
-                                                <a href="#">
-										Style &#8216;Chess&#8217;
-									</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item ">
-                                                        <a href="blog-chess-2-columns.html">
-												2 columns
-											</a>
-                                                    </li>
-                                                    <li class="menu-item ">
-                                                        <a href="blog-chess-4-columns.html">
-												4 columns
-											</a>
-                                                    </li>
-                                                    <li class="menu-item ">
-                                                        <a href="blog-chess-6-columns.html">
-												6 columns
-											</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children ">
-                                                <a href="#">
-										Style &#8216;Classic&#8217;
-									</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item ">
-                                                        <a href="blog-classic-2-columns.html">
-												2 columns
-											</a>
-                                                    </li>
-                                                    <li class="menu-item ">
-                                                        <a href="blog-classic-3-columns.html">
-												3 columns
-											</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="blog-post-formats.html">
-										Post formats
-									</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="blog-standard-post.html">
-										Single Post with Comments
-									</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="rent.html">
-								Rent
-							</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="contacts.html">
-								Contacts
-							</a>
-                                    </li>
-                                </ul>
-                                <div class="search_wrap search_style_expand">
-                                    <div class="search_form_wrap">
-                                        <form role="search" method="get" class="search_form" action="#">
-                                            <input type="text" class="search_field" placeholder="Search" value="" name="s">
-                                            <button type="submit" class="search_submit icon-search"></button>
-                                        </form>
-                                    </div>
-                                    <div class="search_results widget_area">
-                                        <a href="#" class="search_results_close icon-cancel"></a>
-                                        <div class="search_results_content"></div>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <div class="menu_mobile_overlay"></div>
-            <div class="menu_mobile scheme_dark">
-                <div class="menu_mobile_inner">
-                    <a class="menu_mobile_close icon-cancel"></a>
-                    <a class="logo" href="#">
-                        <img src="images/logo.png" class="logo_main" alt="" width="132" height="127">
-                    </a>
-                    <nav class="menu_mobile_nav_area">
-                        <ul id="menu_mobile" class="menu_mobile_nav">
-                            <li class="menu-item ">
-                                <a href="index.html">
-									Home
-								</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent">
-                                <a href="#">
-									Pages
-								</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item ">
-                                        <a href="pages-pricing.html">
-											Pricing table
-										</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="pages-about.html">
-											About Us
-										</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="pages-team.html">
-											Our team
-										</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="pages-services.html">
-											Services
-										</a>
-                                    </li>
-                                    <li class="menu-item current-menu-item current_page_item">
-                                        <a href="pages-404.html">
-											Page 404
-										</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children ">
-                                <a href="#">
-									Features
-								</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item ">
-                                        <a href="features-typography.html">
-											Typography
-										</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="features-shortcodes.html">
-											Shortcodes
-										</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="features-events.html">
-											Events
-										</a>
-                                    </li>
-                                    <li class="menu-item menu-item-object-forum ">
-                                        <a href="features-forum.html">
-											Forum
-										</a>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="#">
-											Help
-										</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="features-help-support.html">
-													Support
-												</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item ">
-                                <a href="gallery.html">
-									Gallery
-								</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children ">
-                                <a href="#">
-									Blog
-								</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="#">
-											Style &#8216;Chess&#8217;
-										</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="blog-chess-2-columns.html">
-													2 columns
-												</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="blog-chess-4-columns.html">
-													4 columns
-												</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="blog-chess-6-columns.html">
-													6 columns
-												</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="#">
-											Style &#8216;Classic&#8217;
-										</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="blog-classic-2-columns.html">
-													2 columns
-												</a>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="blog-classic-3-columns.html">
-													3 columns
-												</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="blog-post-formats.html">
-											Post formats
-										</a>
-                                    </li>
-                                    <li class="menu-item ">
-                                        <a href="blog-standard-post.html">
-											Single Post with Comments
-										</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item ">
-                                <a href="rent.html">
-									Rent
-								</a>
-                            </li>
-                            <li class="menu-item ">
-                                <a href="contacts.html">
-									Contacts
-								</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="search_mobile">
-                        <div class="search_form_wrap">
-                            <form role="search" method="get" class="search_form" action="#">
-                                <input type="text" class="search_field" placeholder="Search ..." value="" name="s">
-                                <button type="submit" class="search_submit icon-search" title="Start search"></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="socials_mobile">
-                        <span class="social_item">
-							<a href="#" target="_blank" class="social_icons social_twitter">
-								<span class="trx_addons_icon-twitter"></span>
-                        </a>
-                        </span>
-                        <span class="social_item">
-							<a href="#" target="_blank" class="social_icons social_facebook">
-								<span class="trx_addons_icon-facebook"></span>
-                        </a>
-                        </span>
-                        <span class="social_item">
-							<a href="#" target="_blank" class="social_icons social_instagram">
-								<span class="trx_addons_icon-instagram"></span>
-                        </a>
-                        </span>
-                    </div>
-                </div>
+<body>
+    <div class="error404-page">
+        <div class="error404-content">
+            <div class="error404-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Evolution Rezidence" />
+                </a>
             </div>
-
-            <div class="page_content_wrap">
-                <div class="content">
-                    <article class="post_item_single post_item_404">
-
-                        <section class="no-col-padding">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="columns_wrap">
-                                        <div class="column_container column-1_1">
-                                            <div class="column-inner">
-                                                <div class="post_content">
-                                                    <h1 class="page_title">404</h1>
-                                                    <div class="page_info">
-                                                        <h1 class="page_subtitle">Oops...</h1>
-                                                        <p class="page_description">We're sorry, but <br>something went wrong.</p>
-                                                        <a href="index.html" class="go_home theme_button">Homepage</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                    </article>
-                </div>
-            </div>
-
-            <footer class="site_footer_wrap scheme_dark">
-                <div class="copyright_wrap scheme_">
-                    <div class="copyright_wrap_inner">
-                        <div class="content_wrap">
-                            <div class="copyright_text">
-                                <a target="_blank" href="https://themerex.net/"> ThemeREX </a>© <span id="date"></span> . All rights reserved. <a target="_blank" href="http://themerex.net/terms-of-service/">Terms of use</a> and <a target="_blank" href="http://themerex.net/privacy-policy/">Privacy Policy</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
+            <h1 class="error404-code">404</h1>
+            <h2 class="error404-subtitle" data-i18n="e404_subtitle">Az oldal nem található</h2>
+            <p class="error404-description" data-i18n="e404_desc">
+                A keresett oldal nem létezik, vagy áthelyezésre került.<br>
+                Kérjük, térjen vissza a főoldalra.
+            </p>
+            <a href="index.html" class="error404-button" data-i18n="e404_btn">Vissza a főoldalra</a>
         </div>
-    </div>
-    <div id="page_preloader">
-        <div class="preloader_wrap preloader_square">
-            <div class="preloader_square1"></div>
-            <div class="preloader_square2"></div>
+        <div class="error404-footer">
+            Evolution Rezidence &copy; <span id="date"></span>
         </div>
     </div>
 
-    <script type='text/javascript' src='js/vendor/jquery-2.2.4.min.js'></script>
-    <script type='text/javascript' src='js/vendor/jquery-migrate.min.js'></script>
-
-
-    <script type='text/javascript' src='js/vendor/_packed.js'></script>
-
-
-    <script type="text/javascript" src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-    <script type='text/javascript' src='js/custom/_utils.js'></script>
-    <script type='text/javascript' src='js/custom/_main.js'></script>
-    <script type='text/javascript' src='js/custom/_date.js'></script>
-    <script type='text/javascript' src='js/custom/shortcodes.js'></script>
-    <script type='text/javascript' src='js/custom/_init.js'></script>
-
-
-
-
-
-
-
-    <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
+    <script>
+        document.getElementById('date').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/custom/i18n.js"></script>
 </body>
 
 </html>

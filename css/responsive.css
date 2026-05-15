@@ -4981,3 +4981,32 @@
         left: 42% !important;
     }
 }
+
+/* ===== Bővebben/Marketing section – Mobile ===== */
+@media (max-width: 767px) {
+    .ev-about-section {
+        padding: 48px 0 !important;
+    }
+    .ev-about-features {
+        grid-template-columns: 1fr !important;
+        gap: 12px 0 !important;
+    }
+    .ev-about-text {
+        font-size: 15px !important;
+        text-align: left !important;
+    }
+}
+
+/* ===== Language Switcher – Mobile ===== */
+@media (max-width: 767px) {
+    #ev-lang-btn {
+        bottom: 16px;
+        right: 16px;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+    .trx_addons_scroll_to_top {
+        bottom: 68px !important;
+        right: 16px !important;
+    }
+}
