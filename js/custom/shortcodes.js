@@ -886,7 +886,7 @@ function trx_addons_ready_actions(e, container) {
 
 	// Sliders
     //----------------------------------------------
-	jQuery(document).trigger('action.init_sliders', [container]);
+	try { jQuery(document).trigger('action.init_sliders', [container]); } catch(e) { console.warn('Slider init error:', e); }
 
 
 	// Shortcodes

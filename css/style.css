@@ -3322,8 +3322,8 @@ body.mobile_layout.menu_style_right .menu_side_wrap .menu_side_button:hover {
 .slider_alias_homeslider-1 .rev_slider_wrapper .rev_slider .slide_subtitle {
     z-index: 6;
     white-space: nowrap;
-    font-size: 27px;
-    line-height: 32px;
+    font-size: 34px;
+    line-height: 40px;
     font-weight: 400;
     color: rgba(203, 184, 169, 1.00);
     font-style: italic;
@@ -3369,8 +3369,8 @@ body.mobile_layout.menu_style_right .menu_side_wrap .menu_side_button:hover {
 .slider_alias_homeslider-1 .rev_slider_wrapper .rev_slider .slide_scroll {
     z-index: 9;
     white-space: normal;
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 26px;
+    line-height: 30px;
     font-weight: 400;
     color: rgba(255, 255, 255, 1.00);
 }
@@ -5438,6 +5438,31 @@ label.required .sc_form_field_title:after {
     width: 8px;
 }
 
+.sc_googlemap_wrap {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.scheme_side .height_large,
+.scheme_side .height_big {
+    height: 0.8rem !important;
+}
+
+.scheme_side .height_huge {
+    height: 2rem !important;
+}
+
+.scheme_side .h92vh {
+    height: 65vh;
+}
+
+@media (max-width: 959px) {
+    .sc_googlemap_wrap {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
 
 /* Icons */
 
@@ -5935,7 +5960,7 @@ label.required .sc_form_field_title:after {
     border-top-color: #1c1c1c !important;
 }
 
-.cq-hotspots .hotspot-item .cq-tooltip span {
+.cq-hotspots .hotspot-item a.cq-tooltip span {
     width: 10px;
     height: 10px;
     margin: -5px 0 0 -5px;
@@ -6117,8 +6142,8 @@ label.required .sc_form_field_title:after {
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 11px !important;
-    line-height: 15px !important;
+    font-size: 35px !important;
+    line-height: 39px !important;
     letter-spacing: 2px;
 }
 
