@@ -167,8 +167,8 @@ function windsor_ready_actions() {
 	// Prepare menus
 	// if (WINDSOR_STORAGE['menu_cache']) windsor_prepare_cached_menus();
 	
-	// Add TOC in the side menu
-	if (jQuery('.menu_side_inner').length > 0 && jQuery('#toc_menu').length > 0)
+	// Add TOC in the side menu (fallback if shortcodes.js already moved it)
+	if (jQuery('.menu_side_inner').length > 0 && jQuery('#toc_menu').length > 0 && jQuery('.menu_side_inner #toc_menu').length == 0)
 		jQuery('#toc_menu').appendTo('.menu_side_inner');
 
 	// Add arrows in mobile menu and WooCommerce categories on homepages

@@ -42,7 +42,11 @@ jQuery(document).on('action.init_shortcodes', function(e, container) {
 
 	var toc_menu = jQuery('#toc_menu');
 	if (toc_menu.length == 0) trx_addons_build_page_toc();
-	
+
+	// Move TOC into side menu immediately after creation
+	if (jQuery('.menu_side_inner').length > 0 && jQuery('#toc_menu').length > 0 && jQuery('.menu_side_inner #toc_menu').length == 0)
+		jQuery('#toc_menu').appendTo('.menu_side_inner');
+
 	toc_menu = jQuery('#toc_menu:not(.inited)');
 	if (toc_menu.length == 0) return;
 	
