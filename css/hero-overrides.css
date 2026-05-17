@@ -151,3 +151,37 @@
         display: none;
     }
 }
+
+/* Lakástípusok controller arrows – match slide height & style */
+.sc_slider_controller_titles .slider_prev,
+.sc_slider_controller_titles .slider_next {
+    bottom: auto !important;
+    top: 12px !important;
+    width: 48px !important;
+    height: 123px !important;
+    line-height: 123px !important;
+    border-radius: 4px !important;
+    background-color: rgb(120, 95, 80) !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    text-align: center !important;
+    transition: background-color 0.3s !important;
+}
+.sc_slider_controller_titles .slider_prev:hover,
+.sc_slider_controller_titles .slider_next:hover {
+    background-color: rgb(90, 70, 58) !important;
+}
+
+/* Lakástípusok slider – tablet fix */
+@media (min-width: 768px) and (max-width: 1135px) {
+    /* Keep side-by-side layout */
+    #slider_plans_swiper .slide_content .column-1_3 {
+        width: 33.33% !important;
+    }
+    #slider_plans_swiper .slide_content .column-2_3 {
+        width: 66.66% !important;
+    }
+    #slider_plans_swiper .slide_content .column-2_3 img {
+        max-height: 350px !important;
+    }
+}
