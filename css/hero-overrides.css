@@ -153,23 +153,27 @@
 }
 
 /* Lakástípusok controller arrows – match slide height & style */
-.sc_slider_controller_titles .slider_prev,
-.sc_slider_controller_titles .slider_next {
+.sc_slider_controller_titles .slider_prev.sc_button_hover_slide_top,
+.sc_slider_controller_titles .slider_next.sc_button_hover_slide_top {
     bottom: auto !important;
-    top: 12px !important;
-    width: 48px !important;
-    height: 123px !important;
-    line-height: 123px !important;
+    top: 28% !important;
+    height: 113px !important;
+    margin-top: -45px !important;
+    line-height: normal !important;
     border-radius: 4px !important;
-    background-color: rgb(120, 95, 80) !important;
+    background: rgb(120, 95, 80) !important;
     color: #fff !important;
     font-size: 18px !important;
     text-align: center !important;
-    transition: background-color 0.3s !important;
+    transition: background 0.3s !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
 }
-.sc_slider_controller_titles .slider_prev:hover,
-.sc_slider_controller_titles .slider_next:hover {
-    background-color: rgb(90, 70, 58) !important;
+.sc_slider_controller_titles .slider_prev.sc_button_hover_slide_top:hover,
+.sc_slider_controller_titles .slider_next.sc_button_hover_slide_top:hover {
+    background: rgb(90, 70, 58) !important;
 }
 
 /* Lakástípusok slider – tablet fix */
