@@ -5935,7 +5935,7 @@ label.required .sc_form_field_title:after {
     border-top-color: #1c1c1c !important;
 }
 
-.cq-hotspots .hotspot-item a.cq-tooltip span {
+.cq-hotspots .hotspot-item .cq-tooltip span {
     width: 10px;
     height: 10px;
     margin: -5px 0 0 -5px;
@@ -6010,7 +6010,7 @@ label.required .sc_form_field_title:after {
 
 .height_large,
 .height_big {
-    height: 6.6667rem !important;
+    height: 1.6667rem !important;
 }
 
 

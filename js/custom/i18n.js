@@ -180,7 +180,7 @@
         var btn = document.createElement('button');
         btn.id = 'ev-lang-btn';
         btn.setAttribute('aria-label', 'Nyelvváltás / Schimbă limba');
-        btn.innerHTML = '<img class="ev-lang-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/svg/1f1ed-1f1fa.svg" width="20" height="14" alt="HU"><span class="ev-lang-label">HU</span>';
+        btn.innerHTML = '<img class="ev-lang-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/svg/1f1ed-1f1fa.svg" width="20" height="14" alt="HU-zaszlo"><span class="ev-lang-label">HU</span>';
 
         btn.addEventListener('click', function () {
             var current = localStorage.getItem('ev_lang') || 'hu';
