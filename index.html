@@ -48,7 +48,8 @@
         .rev_slider>ul>li,.rev_slider>ul>li:before{visibility:hidden}
         .rev_slider .tp-caption,.rev_slider .caption{position:relative;visibility:hidden;white-space:nowrap;display:block}
         .tp-caption{z-index:1;position:absolute;-webkit-font-smoothing:antialiased!important}
-        .slider_alias_homeslider-1 .rev_slider_wrapper{background-color:transparent;padding:0}
+        .slider_alias_homeslider-1 .rev_slider_wrapper{background-color:#1a1a1a;padding:0;background-image:url('images/epulet-front.webp');background-size:cover;background-position:center center;min-height:100vh}
+        .slider_alias_homeslider-1 .rev_slider_wrapper::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.45) 55%,rgba(0,0,0,0.72) 100%);z-index:1;pointer-events:none}
         .slider_alias_homeslider-1 .rev_slider_wrapper .rev_slider{display:none}
         .slider_alias_homeslider-1 .rev_slider_wrapper .tp-bannertimer{visibility:hidden!important}
         .sc_skills_columns{min-height:80px}
@@ -107,7 +108,7 @@
                                                 <h1 class="tp-caption   tp-resizeme  slide_title" id="slide-1-layer-1" data-x="center" data-hoffset="" data-y="center" data-voffset="-20" data-width="['1024']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:500;e:Power2.easeOut;"
                                                     data-transform_out="opacity:0;s:300;" data-start="900" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-i18n="hero_title">MODERN OTTHONOK<br> GYERGYÓSZENTMIKLÓSON </h1>
 
-                                                <div class="tp-caption rev-btn  tp-resizeme  theme_button slide_button" id="slide-1-layer-2" data-x="center" data-hoffset="" data-y="center" data-voffset="150" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+                                                <div class="tp-caption rev-btn  tp-resizeme  theme_button slide_button" id="slide-1-layer-2" data-x="center" data-hoffset="" data-y="center" data-voffset="190" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
                                                     data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);" data-transform_in="y:50px;opacity:0;s:500;e:Power2.easeOut;" data-transform_out="opacity:0;s:300;" data-start="1200" data-splitin="none"
                                                     data-splitout="none" data-actions='[]' data-responsive_offset="on" data-i18n="hero_btn" onclick="event.preventDefault();document.getElementById('sc_anchor_about').scrollIntoView({behavior:'smooth'})">Tudjon meg többet </div>
 
@@ -132,10 +133,10 @@
                     </div>
                 </div>
             </header>
-            <div class="menu_side_wrap scheme_side">
+            <div class="menu_side_wrap scheme_side" aria-hidden="true">
                 <span class="menu_side_button icon-menu-2"></span>
                 <div class="menu_side_inner">
-                    <a class="logo" href="#top" tabindex="-1">
+                    <a class="logo" href="#top">
                         <img src="images/logo.webp" class="logo_main" alt="" width="132" height="127">
                     </a>
                 </div>
@@ -168,7 +169,7 @@
                                                                 <h2 class="sc_item_title sc_promo_title sc_align_default sc_item_title_style_default" data-i18n="intro_title">Bemutatkozik az Evolution Rezidence</h2>
                                                                 <div class="sc_item_descr sc_promo_descr sc_align_default" data-i18n="intro_desc">Gyergyószentmiklóson, a város nyugodt, mégis jól megközelíthető részén valósul meg lakóparkunk, amely a modern élet igényeire szabott, minőségi otthonokat kínál. A korszerű műszaki megoldások, az átgondolt tervezés és a természet közelsége harmonikusan egészítik ki egymást.</div>
                                                                 <div class="sc_item_button sc_item_button_simple sc_promo_button sc_align_default sc_button_wrap">
-                                                                    <a href="#sc_anchor_about" class="sc_button sc_button_simple sc_button_size_normal sc_button_icon_left">
+                                                                    <a href="#sc_anchor_about" class="sc_button sc_button_simple sc_button_size_normal sc_button_icon_left" onclick="event.preventDefault();document.getElementById('sc_anchor_about').scrollIntoView({behavior:'smooth'})">
                                                                         <span class="sc_button_text">
 																			<span class="sc_button_title" data-i18n="intro_btn">Bővebben</span>
                                                                         </span>
@@ -1207,6 +1208,18 @@
 
 
     <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
+
+    <!-- CSS async fallback: ha az onload nem tüzelt, átváltjuk print→all -->
+    <script>
+    (function(){
+        var check = function(){
+            var links = document.querySelectorAll('link[rel="stylesheet"][media="print"]');
+            for (var i = 0; i < links.length; i++) links[i].media = 'all';
+        };
+        if (document.readyState === 'complete') check();
+        else window.addEventListener('load', check);
+    })();
+    </script>
 
     <!-- Lazy loader: background-images + data-src images -->
     <script>
