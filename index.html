@@ -60,7 +60,7 @@
     <!-- RevSlider settings: must be render-blocking (needed for slider init) -->
     <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css">
     <!-- All other CSS deferred: loaded async, no render-blocking -->
-    <link rel="stylesheet" href="css/hero-overrides.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/hero-overrides.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="js/vendor/magnific/magnific-popup.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" media="print" onload="this.media='all'">
@@ -68,17 +68,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/font-face/css/fonts_pack.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/fontello/css/fontello-embedded.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/animation.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/shortcodes.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/template-color.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/shortcodes.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/template-color.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.min.css">
     <!-- Fallback for no-JS -->
     <noscript>
         <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css">
-        <link rel="stylesheet" href="css/hero-overrides.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/hero-overrides.min.css">
+        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/responsive.min.css">
     </noscript>
 
 </head>
@@ -229,7 +229,7 @@
                                 </div>
                             </section>
 
-                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_3_photo">
+                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_3_photo" data-bg="images/kor-ablak.webp">
                                 <div class="container">
                                     <div class="row">
                                         <a id="sc_anchor_photo_tour" class="sc_anchor sc_anchor_default" title="Fotótúra" data-icon="icon-home-2" data-url="" data-i18n-title="anc_photo"></a>
@@ -809,7 +809,7 @@
                                 </div>
                             </section>
 
-                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_3">
+                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_3" data-bg="images/udvar-pavilon.webp">
                                 <div class="container">
                                     <div class="row">
                                         <a id="sc_anchor_services" class="sc_anchor sc_anchor_default" title="Felszereltség" data-icon="icon-tools" data-i18n-title="anc_equip" data-url=""></a>
@@ -1005,7 +1005,7 @@
                                 </div>
                             </section>
 
-                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_4">
+                            <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_4" data-bg="images/udvar-viztukro.jpeg">
                                 <div class="container">
                                     <div class="row">
                                         <a id="sc_anchor_neiborhoods" class="sc_anchor sc_anchor_default" title="Elhelyezkedés" data-icon="icon-map" data-i18n-title="anc_loc" data-url=""></a>
@@ -1208,6 +1208,24 @@
 
 
     <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
+
+    <!-- Lazy background-image loader -->
+    <script>
+    (function() {
+        var lazyBgs = document.querySelectorAll('[data-bg]');
+        if (!lazyBgs.length) return;
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundImage = 'url(' + entry.target.getAttribute('data-bg') + ')';
+                    entry.target.removeAttribute('data-bg');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '200px' });
+        lazyBgs.forEach(function(el) { observer.observe(el); });
+    })();
+    </script>
 
     <script>
     (function() {

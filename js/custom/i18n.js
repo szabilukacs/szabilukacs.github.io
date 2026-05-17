@@ -166,7 +166,9 @@
         if (btn) {
             var flag = btn.querySelector('.ev-lang-flag');
             var label = btn.querySelector('.ev-lang-label');
-            if (flag) flag.textContent = (lang === 'hu') ? '🇭🇺' : '🇷🇴';
+            if (flag) flag.src = (lang === 'hu')
+                ? 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/svg/1f1ed-1f1fa.svg'
+                : 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/svg/1f1f7-1f1f4.svg';
             if (label) label.textContent = (lang === 'hu') ? 'HU' : 'RO';
         }
 
@@ -178,7 +180,7 @@
         var btn = document.createElement('button');
         btn.id = 'ev-lang-btn';
         btn.setAttribute('aria-label', 'Nyelvváltás / Schimbă limba');
-        btn.innerHTML = '<span class="ev-lang-flag">🇭🇺</span><span class="ev-lang-label">HU</span>';
+        btn.innerHTML = '<img class="ev-lang-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14/assets/svg/1f1ed-1f1fa.svg" width="20" height="14" alt="HU"><span class="ev-lang-label">HU</span>';
 
         btn.addEventListener('click', function () {
             var current = localStorage.getItem('ev_lang') || 'hu';
