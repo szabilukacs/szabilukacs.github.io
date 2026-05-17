@@ -16,187 +16,70 @@
     <meta property="og:locale" content="hu_HU">
     <link rel="preload" href="images/epulet-front.webp" as="image" fetchpriority="high">
     <link rel="icon" type="image/x-icon" href="images/logo.webp" />
-    <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="js/vendor/hotspot/css/tooltipster.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css" type="text/css" media="all">
-    <style id="rs-plugin-settings-inline-css" type="text/css">
-        /* CLS fix: reserve space for hero slider before JS loads */
-        .rev_slider_wrapper.fullscreen-container { min-height: 100vh; }
-        .sc_skills_columns { min-height: 80px; }
-        .slider_swiper_outer { min-height: 200px; }
-        .slide_title {
-            text-shadow: 0 2px 24px rgba(0,0,0,0.95), 0 1px 8px rgba(0,0,0,0.8) !important;
-            color: #ffffff !important;
-        }
-        .slide_subtitle {
-            text-shadow: 0 1px 14px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.7) !important;
-            color: #ffffff !important;
-        }
-        .slide_button {
-            text-shadow: none !important;
-        }
-        /* Overlay alapból rejtett */
-        #ev_mobile_hero_overlay {
-            display: none;
-        }
-
-        /* Fotótúra slider – mobil optimalizálás */
-        @media (max-width: 767px) {
-            /* Magasság */
-            .mh530,
-            .mh530 .swiper-slide {
-                min-height: 52vh !important;
-                height: 52vh !important;
-            }
-
-            /* Szélességre húzás: container padding kompenzálása */
-            .slider_style_modern {
-                margin-left: -20px !important;
-                margin-right: -20px !important;
-                position: relative !important;
-                overflow: hidden !important;
-            }
-
-            /* Az outer ne tartson helyet az oldalsó nyilaknak */
-            .slider_style_modern.slider_outer_controls_side {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-
-            /* Navigáció szöveg elrejtve */
-            .slider_style_modern .slider_controls_label {
-                display: none !important;
-            }
-
-            /* Nyilak overlay-ként a kép közepére */
-            .slider_style_modern .slider_controls_wrap {
-                position: absolute !important;
-                top: 50% !important;
-                left: 0 !important;
-                right: 0 !important;
-                width: 100% !important;
-                transform: translateY(-50%) !important;
-                display: flex !important;
-                justify-content: space-between !important;
-                align-items: center !important;
-                padding: 0 12px !important;
-                box-sizing: border-box !important;
-                z-index: 10 !important;
-                pointer-events: none !important;
-            }
-            .slider_style_modern .slider_prev,
-            .slider_style_modern .slider_next {
-                pointer-events: auto !important;
-                position: static !important;
-                top: auto !important;
-                transform: none !important;
-                width: 44px !important;
-                height: 44px !important;
-                min-width: 44px !important;
-                border-radius: 50% !important;
-                background: rgba(0,0,0,0.3) !important;
-                backdrop-filter: blur(6px) !important;
-                -webkit-backdrop-filter: blur(6px) !important;
-                border: 1.5px solid rgba(255,255,255,0.5) !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-            }
-            .slider_style_modern .slider_prev::after,
-            .slider_style_modern .slider_next::after {
-                color: #fff !important;
-                font-size: 16px !important;
-            }
-        }
-
-        @media (max-width: 767px) {
-            /* RevSlider caption-ök elrejtése mobilon */
-            #slide-1-layer-5,
-            #slide-1-layer-1,
-            #slide-1-layer-2,
-            #slide-1-layer-3 {
-                display: none !important;
-            }
-            /* Mobil overlay megjelenítése */
-            #ev_mobile_hero_overlay {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                position: absolute;
-                top: 0; left: 0;
-                width: 100%; height: 100%;
-                z-index: 20;
-                padding-top: 12%;
-                box-sizing: border-box;
-                pointer-events: none;
-                text-align: center;
-            }
-            .ev_mh_subtitle {
-                font-family: Georgia, serif;
-                font-style: italic;
-                font-size: clamp(13px, 3.8vw, 18px);
-                color: #fff;
-                letter-spacing: 0.08em;
-                text-shadow: 0 1px 10px rgba(0,0,0,0.9);
-                margin: 0 0 10px;
-            }
-            .ev_mh_title {
-                font-size: clamp(28px, 8.5vw, 46px);
-                line-height: 1.15;
-                color: #fff;
-                font-weight: 900;
-                letter-spacing: 0.04em;
-                text-shadow: 0 2px 20px rgba(0,0,0,0.95), 0 1px 6px rgba(0,0,0,0.8);
-                margin: 0 0 28px;
-                padding: 0 5%;
-            }
-            .ev_mh_button {
-                pointer-events: auto;
-                display: inline-block;
-                border: 2px solid #fff;
-                border-radius: 50px;
-                color: #fff;
-                font-size: 11px;
-                font-weight: 700;
-                letter-spacing: 0.18em;
-                text-transform: uppercase;
-                padding: 13px 32px;
-                text-decoration: none;
-                background: rgba(0,0,0,0.38);
-                box-shadow: 0 4px 20px rgba(0,0,0,0.45);
-                backdrop-filter: blur(4px);
-                -webkit-backdrop-filter: blur(4px);
-                transition: background 0.2s, box-shadow 0.2s;
-            }
-            .ev_mh_scroll {
-                display: none;
-            }
-        }
+    <!-- Critical inline CSS: above-fold layout + CLS prevention -->
+    <style id="rs-plugin-settings-inline-css">
+        *,*::before,*::after{box-sizing:border-box}
+        html,body{margin:0;padding:0;width:100%}
+        html{font-size:15px;overflow-y:scroll;overflow-x:hidden;-webkit-text-size-adjust:100%}
+        body{font-size:1rem;font-weight:400;letter-spacing:.55px;line-height:180%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+        img{border:0}
+        .page_wrap{min-height:100vh}
+        .top_panel{position:relative;z-index:10000;padding:.1px 0;margin-bottom:7.4rem}
+        .remove_margins .top_panel{margin-bottom:0}
+        .header_widgets_wrap{position:relative;z-index:2}
+        .header_widgets_wrap.header_fullwidth{overflow:hidden}
+        .menu_style_side .menu_side_wrap{position:fixed;width:6rem;z-index:20000;top:0;bottom:0;transition:left .3s ease,right .3s ease}
+        .menu_style_left .menu_side_wrap{left:0}
+        .menu_side_wrap .menu_side_inner{position:absolute;z-index:1;inset:0;width:100%;height:100%}
+        .menu_side_wrap .logo{padding:47% 10%;text-align:center;display:block}
+        .menu_side_wrap .logo img{display:inline-block;max-width:100%;max-height:4.4em;width:auto;margin:0}
+        .menu_side_wrap .menu_side_button{display:none;position:absolute;font-size:16px;top:50%;margin-top:-1.5em;width:3em;height:3em;line-height:3em;cursor:pointer;transition:left .3s ease,right .3s ease}
+        .menu_style_left .menu_side_wrap .menu_side_button{right:-1.5em;text-align:right;padding-right:10px;border-radius:0 50% 50% 0}
+        body.mobile_layout.menu_style_left .menu_side_wrap{left:-6rem}
+        body.mobile_layout.menu_style_left .menu_side_wrap.opened{left:0}
+        body.mobile_layout.menu_style_side .menu_side_wrap .menu_side_button{display:block}
+        .scheme_side .menu_side_wrap{background-color:#283e28}
+        .rev_slider_wrapper{position:relative;z-index:0;width:100%}
+        .rev_slider_wrapper.fullscreen-container{min-height:100vh;position:relative;padding:0}
+        .rev_slider{position:relative;overflow:visible}
+        .rev_slider img{max-width:none!important;margin:0;padding:0;border:none;transition:none}
+        .rev_slider>ul,.rev_slider_wrapper>ul,.rev_slider>ul>li{list-style:none!important;position:absolute;margin:0!important;padding:0!important;top:0;left:0}
+        .rev_slider>ul>li,.rev_slider>ul>li:before{visibility:hidden}
+        .rev_slider .tp-caption,.rev_slider .caption{position:relative;visibility:hidden;white-space:nowrap;display:block}
+        .tp-caption{z-index:1;position:absolute;-webkit-font-smoothing:antialiased!important}
+        .slider_alias_homeslider-1 .rev_slider_wrapper{background-color:transparent;padding:0}
+        .slider_alias_homeslider-1 .rev_slider_wrapper .rev_slider{display:none}
+        .slider_alias_homeslider-1 .rev_slider_wrapper .tp-bannertimer{visibility:hidden!important}
+        .sc_skills_columns{min-height:80px}
+        .slider_swiper_outer{min-height:200px}
+        #ev_mobile_hero_overlay{display:none}
     </style>
-
-
-
-
-
-
-
-
-
-
-    <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="js/vendor/magnific/magnific-popup.min.css" media="print" onload="this.media='all'">
-
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- RevSlider settings: must be render-blocking (needed for slider init) -->
+    <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css">
+    <!-- All other CSS deferred: loaded async, no render-blocking -->
+    <link rel="stylesheet" href="css/hero-overrides.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="js/vendor/magnific/magnific-popup.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="js/vendor/hotspot/css/tooltipster.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/font-face/css/fonts_pack.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/fontello/css/fontello-embedded.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/animation.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/shortcodes.css" media="print" onload="this.media='all'">
-    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/template-color.css" media="print" onload="this.media='all'">
-    <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Fallback for no-JS -->
+    <noscript>
+        <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css">
+        <link rel="stylesheet" href="css/hero-overrides.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </noscript>
 
 </head>
 
