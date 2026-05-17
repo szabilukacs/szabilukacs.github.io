@@ -3327,12 +3327,6 @@ body.mobile_layout.menu_style_right .menu_side_wrap .menu_side_button:hover {
     font-weight: 400;
     color: rgba(203, 184, 169, 1.00);
     font-style: italic;
-    background: rgba(0, 0, 0, 0.25);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    padding: 0.15em 0.8em;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .slider_alias_homeslider-1 .rev_slider_wrapper .rev_slider .slide_title {
@@ -3346,12 +3340,6 @@ body.mobile_layout.menu_style_right .menu_side_wrap .menu_side_button:hover {
     color: rgba(255, 255, 255, 1.00);
     text-align: center;
     text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.2);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    padding: 0.15em 0.5em;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .slider_alias_homeslider-1 .rev_slider_wrapper .rev_slider .slide_button {
@@ -3385,12 +3373,6 @@ body.mobile_layout.menu_style_right .menu_side_wrap .menu_side_button:hover {
     line-height: 30px;
     font-weight: 400;
     color: rgba(255, 255, 255, 1.00);
-    background: rgba(0, 0, 0, 0.25);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    padding: 0.2em 0.8em;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .slider_alias_homeslider-1 .rev_slider_wrapper .tp-bannertimer {
