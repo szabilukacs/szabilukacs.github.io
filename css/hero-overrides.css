@@ -189,3 +189,19 @@
         max-height: 350px !important;
     }
 }
+
+/* Bővebben button – darker color & arrow alignment */
+.sc_promo_button {
+    padding-left: 0 !important;
+}
+.sc_promo_button a.sc_button_simple:not(.sc_button_bg_image),
+.sc_promo_button a.sc_button_simple:not(.sc_button_bg_image):before,
+.sc_promo_button a.sc_button_simple:not(.sc_button_bg_image):after {
+    color: #283E28 !important;
+    font-size: 1.3em;
+}
+.sc_promo_button a.sc_button_simple:not(.sc_button_bg_image):after,
+.sc_promo_button a.sc_button_simple:not(.sc_button_bg_image):before {
+    top: 50%;
+    transform: translateY(-40%);
+}
