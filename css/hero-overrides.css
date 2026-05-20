@@ -165,6 +165,9 @@
     }
 
     /* Elhelyezkedés felirat – kiemelt mobilon */
+    #sc_anchor_neiborhoods ~ .columns_wrap .sc_content_default {
+        text-align: right;
+    }
     #sc_anchor_neiborhoods ~ .columns_wrap .sc_item_subtitle.sc_content_subtitle {
         color: #fff !important;
         background: linear-gradient(135deg, #283E28, #3a5e3a);
@@ -174,7 +177,6 @@
         box-shadow: 0 3px 12px rgba(40,62,40,0.35);
         text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         letter-spacing: 2px !important;
-        float: right;
         margin-top: 30px;
         margin-bottom: 30px;
         margin-right: -10px;
@@ -182,7 +184,8 @@
 
     /* Elhelyezkedés alatti cím – lejjebb mobilon */
     #sc_anchor_neiborhoods ~ .columns_wrap .sc_item_title.sc_content_title {
-        margin-top: 40px;
+        clear: both;
+        margin-top: 20px;
     }
 }
 
