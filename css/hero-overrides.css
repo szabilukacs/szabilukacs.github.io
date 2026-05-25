@@ -9,8 +9,39 @@
     text-shadow: 0 1px 14px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.7) !important;
     color: #ffffff !important;
 }
-.slide_button {
+/* Desktop hero CTA button – solid white, brand green text + pulse glow */
+#slide-1-layer-2 {
     text-shadow: none !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    padding: 20px 52px !important;
+    border-radius: 60px !important;
+    border: none !important;
+    background: rgba(255,255,255,0.95) !important;
+    color: #283E28 !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.3) !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    cursor: pointer !important;
+    animation: hero_btn_glow 3s ease-in-out infinite !important;
+}
+#slide-1-layer-2:hover {
+    background: #fff !important;
+    color: #283E28 !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35), 0 0 0 5px rgba(255,255,255,0.2) !important;
+    transform: translateY(-3px) scale(1.04) !important;
+    animation: none !important;
+}
+@keyframes hero_btn_glow {
+    0%, 100% {
+        box-shadow: 0 6px 30px rgba(0,0,0,0.3), 0 0 0 0 rgba(255,255,255,0.4);
+    }
+    50% {
+        box-shadow: 0 6px 30px rgba(0,0,0,0.3), 0 0 0 14px rgba(255,255,255,0);
+    }
 }
 
 /* Elhelyezkedés felirat – desktop alap szín */
@@ -164,6 +195,14 @@
         display: none;
     }
 
+    /* Fotótúra pagination – mobil spacing */
+    .slider_swiper_outer .slider_pagination_wrap {
+        position: relative !important;
+        bottom: auto !important;
+        margin-top: 12px !important;
+        margin-bottom: 16px !important;
+    }
+
     /* Elhelyezkedés szekció – push reset + jobb igazítás mobilon */
     #sc_anchor_neiborhoods ~ .columns_wrap > .column_container.push-1_3 {
         left: 0;
@@ -228,6 +267,46 @@
     #slider_plans_swiper .slide_content .column-2_3 img {
         max-height: 350px !important;
     }
+}
+
+/* Scroll down – nyíl nagyobb, szöveg mellé */
+.theme_scroll_down {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    font-size: 44px !important;
+    line-height: 1.1 !important;
+}
+.theme_scroll_down::after {
+    display: inline-block !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+}
+
+/* Fotótúra slider fraction pagination – bigger, whiter */
+.slider_swiper_outer .slider_pagination_wrap {
+    font-size: 1.4em !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6) !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 30px !important;
+}
+.slider_swiper_outer .slider_pagination_wrap .swiper-pagination-current {
+    font-size: 2.4em !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5), 0 0 20px rgba(255,255,255,0.15) !important;
+    animation: num_glow 2.5s ease-in-out infinite !important;
+}
+@keyframes num_glow {
+    0%, 100% { text-shadow: 0 2px 12px rgba(0,0,0,0.5), 0 0 20px rgba(255,255,255,0.15); }
+    50%      { text-shadow: 0 2px 12px rgba(0,0,0,0.5), 0 0 30px rgba(255,255,255,0.4); }
+}
+
+/* Fotótúra szekció – alsó gradient eltávolítása */
+.bg_image_3_photo::after {
+    display: none !important;
 }
 
 /* Bővebben button – darker color & arrow alignment */
