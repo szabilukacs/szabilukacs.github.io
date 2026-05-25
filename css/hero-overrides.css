@@ -164,7 +164,10 @@
         display: none;
     }
 
-    /* Elhelyezkedés felirat – kiemelt mobilon */
+    /* Elhelyezkedés szekció – push reset + jobb igazítás mobilon */
+    #sc_anchor_neiborhoods ~ .columns_wrap > .column_container.push-1_3 {
+        left: 0;
+    }
     #sc_anchor_neiborhoods ~ .columns_wrap .sc_content_default {
         text-align: right;
     }

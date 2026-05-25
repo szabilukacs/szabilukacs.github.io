@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Evolution Rezidence – Modern otthonok Gyergyószentmiklóson">
     <meta property="og:description" content="Korszerű, energiahatékony lakópark Gyergyószentmiklóson. Fedezd fel a modern élet igényeire szabott, minőségi otthonokat.">
-    <meta property="og:image" content="images/og-share.jpg">
+    <meta property="og:image" content="images/epulet-front.jpeg">
     <meta property="og:locale" content="hu_HU">
     <link rel="preload" href="images/epulet-front.webp" as="image" fetchpriority="high">
     <link rel="icon" type="image/x-icon" href="images/logo.webp" />
@@ -63,6 +63,7 @@
     <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css">
     <!-- All other CSS deferred: loaded async, no render-blocking -->
     <link rel="stylesheet" href="css/hero-overrides.min.css?v=5" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/construction-journal.css?v=1" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="js/vendor/magnific/magnific-popup.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="js/vendor/hotspot/css/style.min.css" media="print" onload="this.media='all'">
@@ -79,6 +80,7 @@
     <noscript>
         <link rel="stylesheet" href="js/vendor/revslider/public/assets/css/settings.css">
         <link rel="stylesheet" href="css/hero-overrides.min.css?v=5">
+        <link rel="stylesheet" href="css/construction-journal.css?v=1">
         <link rel="stylesheet" href="css/style.min.css?v=2">
         <link rel="stylesheet" href="css/template-color.min.css">
         <link rel="stylesheet" href="css/responsive.min.css">
@@ -1007,6 +1009,132 @@
                                 </div>
                             </section>
 
+                            <!-- ===== Építési napló – Timeline + Galéria ===== -->
+                            <section class="cj-section">
+                                <div class="cj-section-header">
+                                    <p class="cj-section-sub" data-i18n="cj_sub">Az építkezés története</p>
+                                    <h2 class="cj-section-title" data-i18n="cj_title">ÍGY ÉPÜLT AZ EVOLUTION</h2>
+                                </div>
+
+                                <div class="cj-layout">
+                                    <!-- Timeline (bal oldal) -->
+                                    <div class="cj-timeline">
+                                        <div class="cj-milestone active" data-phase="plan">
+                                            <span class="cj-ms-date" data-i18n="cj_d1">2023 Tavasz</span>
+                                            <h3 class="cj-ms-title" data-i18n="cj_t1">Tervezés és engedélyezés</h3>
+                                            <p class="cj-ms-desc" data-i18n="cj_p1">Építészeti tervek, hatósági engedélyek, telek előkészítése.</p>
+                                        </div>
+                                        <div class="cj-milestone" data-phase="found">
+                                            <span class="cj-ms-date" data-i18n="cj_d2">2023 Nyár</span>
+                                            <h3 class="cj-ms-title" data-i18n="cj_t2">Alapozás</h3>
+                                            <p class="cj-ms-desc" data-i18n="cj_p2">Tereprendezés, alapok kiöntése, szilárd szerkezet.</p>
+                                        </div>
+                                        <div class="cj-milestone" data-phase="struct">
+                                            <span class="cj-ms-date" data-i18n="cj_d3">2024 Tavasz</span>
+                                            <h3 class="cj-ms-title" data-i18n="cj_t3">Szerkezetépítés</h3>
+                                            <p class="cj-ms-desc" data-i18n="cj_p3">Emeletek, vasbeton szerkezet, homlokzat kialakítása.</p>
+                                        </div>
+                                        <div class="cj-milestone" data-phase="int">
+                                            <span class="cj-ms-date" data-i18n="cj_d4">2024 Ősz</span>
+                                            <h3 class="cj-ms-title" data-i18n="cj_t4">Belső munkák</h3>
+                                            <p class="cj-ms-desc" data-i18n="cj_p4">Gépészet, villanyszerelés, burkolás, festés.</p>
+                                        </div>
+                                        <div class="cj-milestone" data-phase="finish">
+                                            <span class="cj-ms-date" data-i18n="cj_d5">2025 Nyár</span>
+                                            <h3 class="cj-ms-title" data-i18n="cj_t5">Átadás</h3>
+                                            <p class="cj-ms-desc" data-i18n="cj_p5">Környezetrendezés, az első lakók beköltözése.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Galéria (jobb oldal) -->
+                                    <div class="cj-gallery">
+                                        <!-- Tervezés galéria -->
+                                        <div class="cj-gallery-panel active" data-phase="plan">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <!-- Cseréld ki valós képekre: images/construction/plan-01.webp stb. -->
+                                                    <div class="swiper-slide">
+                                                        <img src="images/epulet-front.webp" alt="Tervezés 1" loading="lazy">
+                                                        <div class="cj-slide-caption">Építészeti látványterv – az első koncepció</div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="images/kor-ablak.webp" alt="Tervezés 2" loading="lazy">
+                                                        <div class="cj-slide-caption">Részlettervek – homlokzati elemek</div>
+                                                    </div>
+                                                </div>
+                                                <div class="cj-nav-prev"></div>
+                                                <div class="cj-nav-next"></div>
+                                                <div class="cj-pagination"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Alapozás galéria -->
+                                        <div class="cj-gallery-panel" data-phase="found">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="images/epulet-front.webp" alt="Alapozás 1" loading="lazy">
+                                                        <div class="cj-slide-caption">Tereprendezés megkezdése</div>
+                                                    </div>
+                                                </div>
+                                                <div class="cj-nav-prev"></div>
+                                                <div class="cj-nav-next"></div>
+                                                <div class="cj-pagination"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Szerkezetépítés galéria -->
+                                        <div class="cj-gallery-panel" data-phase="struct">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="images/epulet-front.webp" alt="Szerkezet 1" loading="lazy">
+                                                        <div class="cj-slide-caption">Az emeletek emelkednek</div>
+                                                    </div>
+                                                </div>
+                                                <div class="cj-nav-prev"></div>
+                                                <div class="cj-nav-next"></div>
+                                                <div class="cj-pagination"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Belső munkák galéria -->
+                                        <div class="cj-gallery-panel" data-phase="int">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="images/belter-haloszoba.webp" alt="Belső 1" loading="lazy">
+                                                        <div class="cj-slide-caption">Belső terek kialakítása</div>
+                                                    </div>
+                                                </div>
+                                                <div class="cj-nav-prev"></div>
+                                                <div class="cj-nav-next"></div>
+                                                <div class="cj-pagination"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Átadás galéria -->
+                                        <div class="cj-gallery-panel" data-phase="finish">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img src="images/udvar-pavilon.webp" alt="Átadás 1" loading="lazy">
+                                                        <div class="cj-slide-caption">A kész épület és környezete</div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img src="images/elokert.webp" alt="Átadás 2" loading="lazy">
+                                                        <div class="cj-slide-caption">Rendezett előkert</div>
+                                                    </div>
+                                                </div>
+                                                <div class="cj-nav-prev"></div>
+                                                <div class="cj-nav-next"></div>
+                                                <div class="cj-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
                             <section class="full-height-section no-col-padding columns-stretch content-middle bg_image_4" data-bg="images/udvar-viztukro.jpeg">
                                 <div class="container">
                                     <div class="row">
@@ -1202,6 +1330,7 @@
     <script defer src="js/custom/_init.js"></script>
     <script defer src="js/custom/_form_contact.js"></script>
     <script defer src="js/custom/i18n.js"></script>
+    <script defer src="js/custom/construction-journal.js"></script>
 
 
 

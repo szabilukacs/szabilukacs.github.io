@@ -1,0 +1,405 @@
+/* ===== Construction Journal – Timeline + Gallery ===== */
+
+.cj-section {
+    background: #283E28;
+    color: #F6F6F6;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/* --- Header --- */
+.cj-section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.cj-section-sub {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #C9A96E;
+    letter-spacing: 0.08em;
+    margin: 0 0 10px;
+}
+.cj-section-title {
+    font-size: clamp(24px, 5vw, 42px) !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    letter-spacing: 0.04em !important;
+    margin: 0 !important;
+    line-height: 1.2;
+}
+
+/* --- Layout: timeline left, gallery right --- */
+.cj-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Timeline column --- */
+.cj-timeline {
+    flex: 0 0 340px;
+    position: relative;
+    padding-left: 28px;
+}
+
+/* Vertical line */
+.cj-timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: rgba(255,255,255,0.15);
+}
+
+/* --- Milestone item --- */
+.cj-milestone {
+    position: relative;
+    padding: 0 0 36px 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.cj-milestone:last-child {
+    padding-bottom: 0;
+}
+.cj-milestone:hover {
+    opacity: 1;
+}
+
+/* Dot */
+.cj-milestone::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+}
+.cj-milestone.active::before {
+    background: #C9A96E;
+    border-color: #C9A96E;
+    transform: scale(1.25);
+    box-shadow: 0 0 0 5px rgba(201,169,110,0.2);
+}
+.cj-milestone.passed::before {
+    background: #C9A96E;
+    border-color: #C9A96E;
+}
+
+/* Date badge */
+.cj-ms-date {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #C9A96E;
+    margin-bottom: 4px;
+}
+
+/* Title */
+.cj-ms-title {
+    font-size: 1.1em !important;
+    font-weight: 700 !important;
+    color: rgba(255,255,255,0.7) !important;
+    margin: 0 !important;
+    line-height: 1.3 !important;
+    transition: color 0.3s;
+}
+.cj-milestone.active .cj-ms-title {
+    color: #fff !important;
+}
+.cj-milestone:hover .cj-ms-title {
+    color: #fff !important;
+}
+
+/* Short description under title */
+.cj-ms-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin: 4px 0 0;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, margin 0.4s ease;
+}
+.cj-milestone.active .cj-ms-desc {
+    max-height: 80px;
+    margin-top: 8px;
+}
+
+/* --- Gallery column --- */
+.cj-gallery {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+/* Gallery panel (one per phase) */
+.cj-gallery-panel {
+    display: none;
+    animation: cjFadeIn 0.5s ease;
+}
+.cj-gallery-panel.active {
+    display: block;
+}
+
+@keyframes cjFadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Swiper overrides for this section */
+.cj-gallery .swiper-container,
+.cj-gallery .swiper {
+    border-radius: 10px;
+    overflow: hidden;
+    background: #1a2e1a;
+}
+
+.cj-gallery .swiper-slide {
+    position: relative;
+}
+
+.cj-gallery .swiper-slide img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Caption overlay */
+.cj-slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 24px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Swiper 3.x nav arrows */
+.cj-nav-prev,
+.cj-nav-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.4) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>') center/16px no-repeat;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    transition: background-color 0.2s;
+}
+.cj-nav-prev { left: 12px; }
+.cj-nav-next {
+    right: 12px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>');
+}
+.cj-nav-prev:hover,
+.cj-nav-next:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Swiper 3.x pagination */
+.cj-pagination {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+.cj-pagination .swiper-pagination-bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.4;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: opacity 0.3s, background 0.3s;
+}
+.cj-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #C9A96E;
+}
+
+/* Image counter badge */
+.cj-img-count {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    z-index: 5;
+    backdrop-filter: blur(4px);
+}
+
+/* Empty state */
+.cj-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 420px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 2px dashed rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.35);
+    font-size: 15px;
+    text-align: center;
+    padding: 40px;
+}
+
+/* --- Mobile --- */
+@media (max-width: 767px) {
+    .cj-section {
+        padding: 40px 0;
+        margin-top: 0;
+        overflow: hidden !important;
+    }
+
+    .cj-section,
+    .cj-section *,
+    .cj-section *::before,
+    .cj-section *::after {
+        box-sizing: border-box;
+    }
+
+    .cj-section-header {
+        margin-bottom: 20px;
+        padding: 0 16px;
+    }
+
+    /* Kill desktop flex layout */
+    .cj-layout {
+        display: block;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Timeline: horizontal scrollable row */
+    .cj-timeline {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+        padding: 16px 16px 14px;
+        position: relative;
+        flex: none;
+    }
+    .cj-timeline::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide the container line on mobile */
+    .cj-timeline::before {
+        display: none;
+    }
+
+    .cj-milestone {
+        flex: 0 0 auto;
+        padding: 20px 18px 0 0;
+        min-width: 100px;
+        /* Horizontal line via border on each milestone */
+        border-top: 2px solid rgba(255,255,255,0.15);
+    }
+    .cj-milestone::before {
+        left: 0;
+        top: -8px;
+        width: 12px;
+        height: 12px;
+    }
+    .cj-ms-date {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+    }
+    .cj-ms-title {
+        font-size: 0.8em !important;
+    }
+    .cj-ms-desc {
+        display: none;
+    }
+
+    /* Gallery: full width below timeline */
+    .cj-gallery {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        margin-top: 12px;
+    }
+
+    .cj-gallery-panel,
+    .cj-gallery .swiper-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .cj-gallery .swiper-container {
+        border-radius: 8px;
+        touch-action: pan-y pinch-zoom;
+    }
+
+    .cj-gallery .swiper-slide {
+        width: 100% !important;
+    }
+
+    .cj-gallery .swiper-slide img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .cj-nav-prev,
+    .cj-nav-next {
+        width: 32px;
+        height: 32px;
+    }
+    .cj-nav-prev { left: 6px; }
+    .cj-nav-next { right: 6px; }
+
+    .cj-slide-caption {
+        padding: 20px 14px 12px;
+        font-size: 12px;
+    }
+
+    .cj-empty {
+        height: 220px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cj-timeline {
+        flex: 0 0 260px;
+    }
+
+    .cj-gallery .swiper-slide img {
+        height: 340px;
+    }
+}
