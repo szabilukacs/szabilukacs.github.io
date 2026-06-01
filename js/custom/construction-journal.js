@@ -8,6 +8,7 @@
     var milestones = section.querySelectorAll('.cj-milestone');
     var panels     = section.querySelectorAll('.cj-gallery-panel');
     var swipers    = {};
+    var userClicked = false;
 
     function activate(idx) {
         // Update milestones
@@ -48,8 +49,8 @@
             }
         }
 
-        // Mobile: scroll active milestone into view
-        if (window.innerWidth <= 767) {
+        // Mobile: scroll active milestone into view (only on user click, not on init)
+        if (userClicked && window.innerWidth <= 767) {
             milestones[idx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
         }
     }
@@ -58,6 +59,7 @@
     for (var k = 0; k < milestones.length; k++) {
         (function (index) {
             milestones[index].addEventListener('click', function () {
+                userClicked = true;
                 activate(index);
             });
         })(k);
