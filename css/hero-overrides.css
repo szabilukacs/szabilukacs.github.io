@@ -1,12 +1,12 @@
 /* Hero overrides & mobile overlay + Fotótúra slider mobile */
 
-/* RevSlider text-shadow overrides */
+/* RevSlider text-shadow overrides – WCAG AA contrast on image bg */
 .slide_title {
-    text-shadow: 0 2px 24px rgba(0,0,0,0.95), 0 1px 8px rgba(0,0,0,0.8) !important;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.95), 0 1px 8px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5) !important;
     color: #ffffff !important;
 }
 .slide_subtitle {
-    text-shadow: 0 1px 14px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.7) !important;
+    text-shadow: 0 1px 14px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.5) !important;
     color: #ffffff !important;
 }
 /* Desktop hero CTA button – solid white, brand green text + pulse glow */
@@ -323,4 +323,28 @@
 .sc_promo_button a.sc_button_simple:not(.sc_button_bg_image):before {
     top: 50%;
     transform: translateY(-40%);
+}
+
+/* ===== Accessibility – WCAG AA contrast fixes ===== */
+
+/* "Minőségi Lakások" subtitle: #B29788 on #F6F6F6 → #8A6E60 (4.5:1+) */
+.sc_item_subtitle {
+    color: #8A6E60 !important;
+}
+
+/* "1 SZOBÁS LAKÁS" accent text: #B29788 on #F6F6F6 → #8A6E60 */
+.trx_addons_accent,
+.trx_addons_accent > * {
+    color: #8A6E60 !important;
+}
+
+/* Contact form placeholders: #A8AFB5 on white → #707880 (4.5:1+) */
+.sc_form .sc_form_field input[type="text"]::placeholder,
+.sc_form .sc_form_field textarea::placeholder {
+    color: #707880 !important;
+    opacity: 1 !important;
+}
+.sc_form .sc_form_field input[type="text"],
+.sc_form .sc_form_field textarea {
+    color: #3a3a3a !important;
 }
